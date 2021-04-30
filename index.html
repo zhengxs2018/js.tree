@@ -1,0 +1,340 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@zhengxs/js.tree - v0.1.0-rc</title>
+	<meta name="description" content="Documentation for @zhengxs/js.tree - v0.1.0-rc">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@zhengxs/js.tree - v0.1.0-rc</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>@zhengxs/js.tree - v0.1.0-rc</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#zhengxsjstree" id="zhengxsjstree" style="color: inherit; text-decoration: none;">
+					<h1>@zhengxs/js.tree</h1>
+				</a>
+				<p><a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/lang-typescript-informational" alt="lang"></a>
+					<a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier"></a>
+				<img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="License"></p>
+				<p>操作树结构数据的 JavaScript 库。</p>
+				<a href="#安装" id="安装" style="color: inherit; text-decoration: none;">
+					<h2>安装</h2>
+				</a>
+				<pre><code class="language-shell"><span style="color: #000000">$ npm i @zhengxs/js.tree --save</span>
+</code></pre>
+				<a href="#使用" id="使用" style="color: inherit; text-decoration: none;">
+					<h2>使用</h2>
+				</a>
+				<p><strong>行转树</strong></p>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">toTree</span><span style="color: #000000">, </span><span style="color: #001080">ROOT_ID</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@zhengxs/js.tree&#039;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">data</span><span style="color: #000000"> = [</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> }</span>
+<span style="color: #000000">]</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #795E26">toTree</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">, {</span>
+<span style="color: #000000">  </span><span style="color: #008000">// 只有 null 或 undefined 才会将 root 改成 ROOT_ID</span>
+<span style="color: #000000">  </span><span style="color: #008000">// 如果根ID不是 null 或 undefined，那就需要手动指定</span>
+<span style="color: #000000">  </span><span style="color: #008000">// 支持函数，动态返回</span>
+<span style="color: #000000">  </span><span style="color: #001080">root:</span><span style="color: #000000"> </span><span style="color: #0070C1">ROOT_ID</span><span style="color: #000000">,</span>
+
+<span style="color: #000000">  </span><span style="color: #008000">// 不是所有的关系字段都叫这个</span>
+<span style="color: #000000">  </span><span style="color: #008000">// 这时就可以手动指定</span>
+<span style="color: #000000">  </span><span style="color: #001080">idKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;id&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// 默认: id</span>
+<span style="color: #000000">  </span><span style="color: #001080">parentKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;parentId&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// 默认：parentId</span>
+
+<span style="color: #000000">  </span><span style="color: #008000">// 挂载子级的属性名称，默认：children</span>
+<span style="color: #000000">  </span><span style="color: #001080">childrenKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;children&#039;</span><span style="color: #000000">,</span>
+
+<span style="color: #000000">  </span><span style="color: #008000">// 数据添加进 children 数组前的处理，默认：undefined</span>
+<span style="color: #000000">  </span><span style="color: #795E26">transform</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// 可以通过 Object.create 创建</span>
+<span style="color: #000000">    </span><span style="color: #008000">// 这样可以避免修改原始数据，同时又能共享原型</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #267F99">Object</span><span style="color: #000000">.</span><span style="color: #795E26">create</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">)</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">})</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #008000">// [</span>
+<span style="color: #008000">//   { id: 2, parentId: null, children: [] },</span>
+<span style="color: #008000">//   {</span>
+<span style="color: #008000">//     id: 1,</span>
+<span style="color: #008000">//     parentId: null,</span>
+<span style="color: #008000">//     children: [{ id: 3, parentId: 1, children: [] }]</span>
+<span style="color: #008000">//   }</span>
+<span style="color: #008000">// ]</span>
+</code></pre>
+				<p><strong>树转行</strong></p>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">toRows</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@zhengxs/js.tree&#039;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">data</span><span style="color: #000000"> = [</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">children:</span><span style="color: #000000"> [{ </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] }]</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">]</span>
+
+<span style="color: #008000">// 如果不是 children 属性，可以通过第二个参数指定，可选</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #795E26">toRows</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;children&#039;</span><span style="color: #000000">)</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #008000">// [</span>
+<span style="color: #008000">//   { id: 2, parentId: null },</span>
+<span style="color: #008000">//   { id: 3, parentId: 1 },</span>
+<span style="color: #008000">//   { id: 1, parentId: null }</span>
+<span style="color: #008000">// ]</span>
+</code></pre>
+				<p><strong>内容过滤</strong></p>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">filter</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@zhengxs/js.tree&#039;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">data</span><span style="color: #000000"> = [</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;财务&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">children:</span><span style="color: #000000"> [{ </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;收入流失&#039;</span><span style="color: #000000"> }, { </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;财务设置&#039;</span><span style="color: #000000"> }]</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;站点设置&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">children:</span><span style="color: #000000"> [{ </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;菜单维护&#039;</span><span style="color: #000000"> }, { </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;角色维护&#039;</span><span style="color: #000000"> }]</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">]</span>
+
+<span style="color: #008000">// 如果不是 children 属性，可以通过第二个参数指定，可选</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #795E26">filter</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">, (</span><span style="color: #001080">node</span><span style="color: #000000">, </span><span style="color: #001080">index</span><span style="color: #000000">, </span><span style="color: #001080">parents</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">node</span><span style="color: #000000">.</span><span style="color: #001080">title</span><span style="color: #000000">.</span><span style="color: #795E26">indexOf</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;设置&#039;</span><span style="color: #000000">) &gt; -</span><span style="color: #098658">1</span>
+<span style="color: #000000">})</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #008000">// [</span>
+<span style="color: #008000">//   {</span>
+<span style="color: #008000">//     title: &#039;财务&#039;,</span>
+<span style="color: #008000">//     children: [</span>
+<span style="color: #008000">//       { title: &#039;财务设置&#039; }</span>
+<span style="color: #008000">//     ]</span>
+<span style="color: #008000">//   },</span>
+<span style="color: #008000">//   {</span>
+<span style="color: #008000">//     title: &#039;站点设置&#039;,</span>
+<span style="color: #008000">//     children: [</span>
+<span style="color: #008000">//       { title: &#039;菜单维护&#039; },</span>
+<span style="color: #008000">//       { title: &#039;角色维护&#039; }</span>
+<span style="color: #008000">//     ]</span>
+<span style="color: #008000">//   }</span>
+<span style="color: #008000">// ]</span>
+
+<span style="color: #008000">// 如果不是 children 属性，可以通过第三个参数指定，可选</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #795E26">filter</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">, </span><span style="color: #001080">callback</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;items&#039;</span><span style="color: #000000">)</span>
+</code></pre>
+				<p><strong>内容过滤</strong></p>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">filter</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@zhengxs/js.tree&#039;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">data</span><span style="color: #000000"> = [</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;财务&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">children:</span><span style="color: #000000"> [{ </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;收入流失&#039;</span><span style="color: #000000"> }, { </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;财务设置&#039;</span><span style="color: #000000"> }]</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;站点设置&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">children:</span><span style="color: #000000"> [{ </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;菜单维护&#039;</span><span style="color: #000000"> }, { </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;角色维护&#039;</span><span style="color: #000000"> }]</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">]</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #795E26">map</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">, (</span><span style="color: #001080">node</span><span style="color: #000000">, </span><span style="color: #001080">index</span><span style="color: #000000">, </span><span style="color: #001080">parents</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">node</span><span style="color: #000000">.</span><span style="color: #001080">title</span><span style="color: #000000"> === </span><span style="color: #A31515">&#039;财务&#039;</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// 可以返回空的子节点，停止处理子级</span>
+<span style="color: #000000">    </span><span style="color: #008000">// 注意：参数浅拷贝，修改不会改变原始对象</span>
+<span style="color: #000000">    </span><span style="color: #001080">node</span><span style="color: #000000">.</span><span style="color: #001080">children</span><span style="color: #000000"> = []</span>
+<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">node</span>
+<span style="color: #000000">  }</span>
+
+<span style="color: #000000">  </span><span style="color: #008000">// 注意：参数浅拷贝，修改不会改变原始对象</span>
+<span style="color: #000000">  </span><span style="color: #001080">node</span><span style="color: #000000">.</span><span style="color: #001080">title</span><span style="color: #000000"> = </span><span style="color: #001080">node</span><span style="color: #000000">.</span><span style="color: #001080">title</span><span style="color: #000000"> + </span><span style="color: #A31515">&#039;测试&#039;</span>
+
+<span style="color: #000000">  </span><span style="color: #008000">// 必须返回内容</span>
+<span style="color: #000000">  </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #001080">node</span>
+<span style="color: #000000">})</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #008000">// [</span>
+<span style="color: #008000">//   {</span>
+<span style="color: #008000">//     title: &#039;财务&#039;,</span>
+<span style="color: #008000">//     children: []</span>
+<span style="color: #008000">//   },</span>
+<span style="color: #008000">//   {</span>
+<span style="color: #008000">//     title: &#039;站点设置测试&#039;,</span>
+<span style="color: #008000">//     children: [{ title: &#039;菜单维护测试&#039; }, { title: &#039;角色维护测试&#039; }]</span>
+<span style="color: #008000">//   }</span>
+<span style="color: #008000">// ]</span>
+
+<span style="color: #008000">// 如果不是 children 属性，可以通过第三个参数指定，可选</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #795E26">map</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">, </span><span style="color: #001080">callback</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;items&#039;</span><span style="color: #000000">)</span>
+</code></pre>
+				<a href="#对不同构建版本的解释" id="对不同构建版本的解释" style="color: inherit; text-decoration: none;">
+					<h2>对不同构建版本的解释</h2>
+				</a>
+				<p>在包的 dist/ 目录你将会找到很多不同的构建版本，这里列出了它们之间的差别：</p>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>UMD</th>
+							<th>CommonJS</th>
+							<th>ES Module</th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td>无依赖</td>
+							<td>js.tree.js</td>
+							<td>js.tree.common.js</td>
+							<td>js.tree.esm.js</td>
+						</tr>
+						<tr>
+							<td>无依赖(生产环境)</td>
+							<td>js.tree.min.js</td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>包含 lodash 模块</td>
+							<td></td>
+							<td>js.tree.common.lodash.js</td>
+							<td>js.tree.esm.lodash.js</td>
+						</tr>
+						<tr>
+							<td>包含 lodash-es 模块</td>
+							<td></td>
+							<td></td>
+							<td>js.tree.esm.lodash-es.js</td>
+						</tr>
+				</tbody></table>
+				<p>除环境导致的，为了减少包体积，和项目共享 <code>lodash</code> 模块。</p>
+				<p>但不是所有项目都会引入，为了避免这种情况，默认的都是不带的。</p>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<ul>
+					<li>MIT</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/node.html" class="tsd-kind-icon">Node</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#exporter" class="tsd-kind-icon">Exporter</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#id" class="tsd-kind-icon">ID</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#none" class="tsd-kind-icon">None</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="modules.html#row" class="tsd-kind-icon">Row</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
+						<a href="modules.html#treeoptions" class="tsd-kind-icon">Tree<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-property">
+						<a href="modules.html#default" class="tsd-kind-icon">default</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#children_key" class="tsd-kind-icon">CHILDREN_<wbr>KEY</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#id_key" class="tsd-kind-icon">ID_<wbr>KEY</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#parent_id_key" class="tsd-kind-icon">PARENT_<wbr>ID_<wbr>KEY</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="modules.html#root_id" class="tsd-kind-icon">ROOT_<wbr>ID</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#filter" class="tsd-kind-icon">filter</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#map" class="tsd-kind-icon">map</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#torows" class="tsd-kind-icon">to<wbr>Rows</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="modules.html#totree" class="tsd-kind-icon">to<wbr>Tree</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
