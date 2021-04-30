@@ -127,10 +127,10 @@ const result = filter(data, (node, index, parents) => {
 const result = filter(data, callback, 'items')
 ```
 
-**内容过滤**
+**修改内容**
 
 ```js
-import { filter } from '@zhengxs/js.tree'
+import { map } from '@zhengxs/js.tree'
 
 const data = [
   {
