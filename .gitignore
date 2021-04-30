@@ -1,0 +1,17 @@
+.DS_Store
+
+node_modules
+
+coverage
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.idea
+.history/
+
+dist/
+docs/
+temp/

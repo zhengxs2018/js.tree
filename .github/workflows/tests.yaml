@@ -1,0 +1,33 @@
+name: Node.js CI
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - beta
+      - next
+    paths:
+      - src/**/*
+      - api-extractor.json
+      - package.json
+      - jest.config.js
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 安装 Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '10.x'
+      - name: 安装依赖
+        run: yarn --frozen-lockfile
+      - name: 运行代码检查
+        run: yarn lint
+      - name: 运行单元测试
+        run: yarn ci
+      - name: 检查 API 导出情况
+        run: |
+          yarn build
+          yarn api
