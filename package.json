@@ -92,6 +92,11 @@
     "typedoc-plugin-nojekyll": "^1.0.1",
     "typescript": "^4.1.5"
   },
+  "homepage": "https://github.com/zhengxs2018/js.tree",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhengxs2018/js.tree"
+  },
   "engines": {
     "node": ">= 10.x"
   },
