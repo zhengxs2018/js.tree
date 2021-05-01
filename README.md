@@ -2,14 +2,23 @@
 
 [![lang](https://img.shields.io/badge/lang-typescript-informational)](https://www.typescriptlang.org/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![npm version](https://badge.fury.io/js/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
+[![npm version](https://img.shields.io/npm/v/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
 [![Downloads](https://img.shields.io/npm/dt/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
 [![Downloads](https://img.shields.io/npm/dm/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
 [![Gzip Size](http://img.badgesize.io/https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip)](https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js)
 [![codecov](https://codecov.io/gh/zhengxs2018/js.tree/branch/main/graph/badge.svg?token=JBYVAK2RRG)](https://codecov.io/gh/zhengxs2018/js.tree)
 ![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
-操作树结构数据的 JavaScript 库。
+快速，轻量，无依赖的树结构数据处理函数库。
+
+## 特点
+
+- 一个循环解决行转树的问题
+- 转树除了添加 `children` 属性，不会修改任何数据
+- 支持任意关系字段，如：id，parentId, children 字段
+- 支持动态导出树节点
+- 内置 `filter/map` 树遍历快捷方法
+- `lodash` 是可选的，详见底部介绍
 
 ## 安装
 
@@ -174,6 +183,8 @@ const result = map(data, callback, 'items')
 ```
 
 ## 对不同构建版本的解释
+
+> umd 模块使用 `es5`，其他版本使用的是 `es2015`。
 
 在包的 dist/ 目录你将会找到很多不同的构建版本，这里列出了它们之间的差别：
 
