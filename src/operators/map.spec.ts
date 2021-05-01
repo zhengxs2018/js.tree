@@ -2,22 +2,16 @@ import { deepStrictEqual } from 'power-assert'
 
 import { map } from './map'
 
-describe('api/filter.js', function () {
+describe('operators/filter.js', function () {
   it('test filter()', function () {
     const data = [
       {
         title: '财务',
-        children: [
-          { title: '收入流失' },
-          { title: '财务设置' }
-        ]
+        children: [{ title: '收入流失' }, { title: '财务设置' }]
       },
       {
         title: '站点设置',
-        children: [
-          { title: '菜单维护' },
-          { title: '角色维护' }
-        ]
+        children: [{ title: '菜单维护' }, { title: '角色维护' }]
       }
     ]
 
@@ -36,10 +30,7 @@ describe('api/filter.js', function () {
       },
       {
         title: '站点设置测试',
-        children: [
-          { title: '菜单维护测试' },
-          { title: '角色维护测试' }
-        ]
+        children: [{ title: '菜单维护测试' }, { title: '角色维护测试' }]
       }
     ]
 
@@ -50,27 +41,25 @@ describe('api/filter.js', function () {
     const data = [
       {
         title: '财务',
-        items: [
-          { title: '收入流失' },
-          { title: '财务设置' }
-        ]
+        items: [{ title: '收入流失' }, { title: '财务设置' }]
       },
       {
         title: '站点设置',
-        items: [
-          { title: '菜单维护' },
-          { title: '角色维护' }
-        ]
+        items: [{ title: '菜单维护' }, { title: '角色维护' }]
       }
     ]
 
-    const result = map(data, (node) => {
-      if (node.title === '财务') {
-        return { ...node, items: [] }
-      }
-      node.title = node.title + '测试'
-      return node
-    }, 'items')
+    const result = map(
+      data,
+      (node) => {
+        if (node.title === '财务') {
+          return { ...node, items: [] }
+        }
+        node.title = node.title + '测试'
+        return node
+      },
+      'items'
+    )
 
     const expected = [
       {
@@ -79,10 +68,7 @@ describe('api/filter.js', function () {
       },
       {
         title: '站点设置测试',
-        items: [
-          { title: '菜单维护测试' },
-          { title: '角色维护测试' }
-        ]
+        items: [{ title: '菜单维护测试' }, { title: '角色维护测试' }]
       }
     ]
 
