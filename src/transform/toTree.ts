@@ -57,18 +57,21 @@ export function toTree<T extends Row, S = Node>(
 
   const nodes: Record<ID, S[]> = {}
 
-  data.forEach((row, index) => {
+  let i = data.length
+  while (i--) {
+    const row: T = data[i] as T
+
     // 获取节点ID
     const id = row[idKey] as ID
 
     // id 必须存在
-    assert(isNotNil(id), `id is required, in ${index}.`)
+    assert(isNotNil(id), `id is required, in ${i}.`)
 
     // 数据结构转换
     const node = transform(row)
 
     // 支持过滤掉某些数据
-    if (isNil(node)) return
+    if (isNil(node)) continue
 
     // 获取子级元素
     const children = nodes[id]
@@ -88,7 +91,7 @@ export function toTree<T extends Row, S = Node>(
     } else {
       nodes[parentId] = [node]
     }
-  })
+  }
 
   return exporter(nodes, root)
 }
