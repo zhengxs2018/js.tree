@@ -45,7 +45,19 @@ const umdConfig = merge(noLodash, {
     format: 'umd',
     name: 'jsTree'
   },
-  plugins: [tsCompile]
+  plugins: [
+    typescript({
+      tsconfigOverride: {
+        compilerOptions: {
+          target: "es5",
+          module: 'es2015',
+          declaration: false,
+          declarationMap: false,
+          removeComments: true,
+        }
+      }
+    })
+  ]
 })
 
 export default [
