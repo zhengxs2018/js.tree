@@ -1,4 +1,5 @@
 import { CHILDREN_KEY } from '../common/constants'
+import type { Row } from '../types'
 
 /**
  * 类数组的 map 方法
@@ -9,17 +10,16 @@ import { CHILDREN_KEY } from '../common/constants'
  * @param callback     - 处理回调，注意：如果返回的对象子级不存在将不进行递归操作
  * @param childrenKey  - 自定义子节点属性名称
  */
-export function map<T = any, S = any>(
+export function map<T extends Row, U extends Row>(
   data: T[],
-  callback: (data: T, index: number, parents: T[]) => S,
+  callback: (data: T, index: number, parents: T[]) => U,
   childrenKey: string = CHILDREN_KEY
-): S[] {
-  function iter(data: T[], parents: T[]): S[] {
+): U[] {
+  function iter(data: T[], parents: T[]): U[] {
     return data.map((node, index) => {
       const source = callback({ ...node }, index, parents)
 
-      // @ts-ignore
-      const children = iter(source[childrenKey] || [], parents.concat(node))
+      const children = iter(source[childrenKey] as T[] || [], parents.concat(node))
       if (children.length > 0) {
         return { ...source, [childrenKey]: children }
       }

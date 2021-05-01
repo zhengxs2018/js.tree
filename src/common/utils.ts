@@ -1,19 +1,21 @@
 import { isNil } from 'lodash'
 
+import type { Row } from '../types'
+
 /**
  * 和 isNil 结果相反
  *
- * @param value
+ * @param value - 需要检查的值
  */
-export function isNotNil(value: unknown) {
+export function isNotNil(value: unknown): boolean {
   return isNil(value) === false
 }
 
 /**
  * 断言，模拟 node api
  *
- * @param value
- * @param message
+ * @param value    - 断言结果
+ * @param message  - 断言失败提示
  */
 /* istanbul ignore next */
 export function assert(value: boolean, message: string | Error): never | void {
@@ -31,11 +33,8 @@ export function assert(value: boolean, message: string | Error): never | void {
  * @param key          - 属性名
  * @param defaultValue - 默认值
  */
-export function popKey<T extends object>(source: T, key: string, defaultValue?: unknown): T {
-  // @ts-ignore
-  const value = source[key]
-  // @ts-ignore
+export function popKey<T extends Row, U>(source: T, key: string, defaultValue?: U): U | undefined {
+  const value = source[key] as U
   delete source[key]
-  // 如果值不存在，那就返回默认值
   return isNil(value) ? defaultValue : value
 }

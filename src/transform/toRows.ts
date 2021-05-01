@@ -1,5 +1,6 @@
 import { popKey } from '../common/utils'
 import { CHILDREN_KEY } from '../common/constants'
+import type { Row } from '../types'
 
 /**
  * 树转行
@@ -9,13 +10,15 @@ import { CHILDREN_KEY } from '../common/constants'
  * @param data        - 树结构数据
  * @param childrenKey - children 属性名
  */
-export function toRows<T = any>(data: any[], childrenKey: string = CHILDREN_KEY): T[] {
-  const result: T[] = []
+export function toRows<T extends Row, U extends Row>(data: T[], childrenKey: string = CHILDREN_KEY): U[] {
+  const result: U[] = []
 
-  function callback(source: any) {
-    const target = { ...source }
+  function callback(source: T) {
+    const target = { ...source } as U
     result.push(target)
-    popKey(target, childrenKey, []).forEach(callback)
+
+    const children = popKey(target as U, childrenKey as string, [] as T[]) as T[]
+    children.forEach(callback)
   }
 
   data.forEach(callback)

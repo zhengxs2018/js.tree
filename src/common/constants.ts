@@ -3,25 +3,25 @@
  *
  * @public
  */
-export const ROOT_ID: string = '__root__'
+export const ROOT_ID = '__root__'
 
 /**
  * id 的属性名
  *
  * @public
  */
-export const ID_KEY: string = 'id'
+export const ID_KEY = 'id'
 
 /**
  * parentId 的属性名
  *
  * @public
  */
-export const PARENT_ID_KEY: string = 'parentId'
+export const PARENT_ID_KEY = 'parentId'
 
 /**
  * 子级的属性名
  *
  * @public
  */
-export const CHILDREN_KEY: string = 'children'
+export const CHILDREN_KEY = 'children'

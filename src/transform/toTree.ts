@@ -45,7 +45,7 @@ export type TreeOptions<T, S> = {
  * @param data    - 行数据
  * @param options - 配置项
  */
-export function toTree<T extends Row, S = Node>(
+export function toTree<T extends Row, S extends Row = Node>(
   data: T[],
   options: TreeOptions<T, S> = {}
 ): S[] {
@@ -53,7 +53,7 @@ export function toTree<T extends Row, S = Node>(
   const idKey = defaultTo(options.idKey, ID_KEY)
   const parentKey = defaultTo(options.parentKey, PARENT_ID_KEY)
   const childrenKey = defaultTo(options.childrenKey, CHILDREN_KEY)
-  const transform = options.transform || ((x) => x as any)
+  const transform = options.transform || ((x) => x as S)
 
   const nodes: Record<ID, S[]> = {}
 
@@ -76,9 +76,9 @@ export function toTree<T extends Row, S = Node>(
     // 获取子级元素
     const children = nodes[id]
     if (children) {
-      node[childrenKey] = children
+      (node as Row)[childrenKey] = children
     } else {
-      nodes[id] = node[childrenKey] = []
+      nodes[id] = (node as Row)[childrenKey] = []
     }
 
     // 获取上级节点ID
