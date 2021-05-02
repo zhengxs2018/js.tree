@@ -7,7 +7,9 @@
 [![Downloads](https://img.shields.io/npm/dm/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
 [![Gzip Size](http://img.badgesize.io/https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip)](https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js)
 [![codecov](https://codecov.io/gh/zhengxs2018/js.tree/branch/main/graph/badge.svg?token=JBYVAK2RRG)](https://codecov.io/gh/zhengxs2018/js.tree)
-[![Dependencies](https://david-dm.org/zhengxs2018/js.tree.SVG)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
+[![Dependency Status](https://david-dm.org/zhengxs2018/js.tree.SVG)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
+[![devDependency Status](https://david-dm.org/zhengxs2018/js.tree/dev-status.svg)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
+[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg)](#typescript)
 ![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
 
 快速，轻量，无依赖的树结构数据处理函数库。
@@ -181,6 +183,33 @@ const result = map(data, (node, index, parents) => {
 
 // 如果不是 children 属性，可以通过第三个参数指定，可选
 const result = map(data, callback, 'items')
+```
+
+## TypeScript
+
+内置 ts 类型
+
+```ts
+import { toTree } from '@zhengxs/js.tree'
+
+// 转换前的数据
+type MenuItem = {
+  id: string
+  parentId: string
+  text: string
+  url?: string
+}
+
+// 转换后的数据
+interface Nav extends MenuItem {
+  items: Nav[]
+}
+
+// 如果修改了 childrenKey
+// 为了让类型提示正确，可以传入正确的类型
+toTree<Nav>(source, {
+  childrenKey: 'items'
+})
 ```
 
 ## 对不同构建版本的解释
