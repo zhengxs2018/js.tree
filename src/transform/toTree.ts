@@ -45,7 +45,7 @@ export type TreeOptions<T, S> = {
  * @param data    - 行数据
  * @param options - 配置项
  */
-export function toTree<T extends Row, S extends Row = Node>(
+export function toTree<S = Node, T extends Row = Row>(
   data: T[],
   options: TreeOptions<T, S> = {}
 ): S[] {
