@@ -61,7 +61,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.14.0",
+    "@microsoft/api-extractor": "^7.15.0",
     "@rollup/plugin-alias": "^3.1.2",
     "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",
@@ -99,7 +99,7 @@
     "ts-jest": "^26.4.4",
     "typedoc": "^0.20.36",
     "typedoc-plugin-nojekyll": "^1.0.1",
-    "typescript": "^4.1.5"
+    "typescript": "^4.2.4"
   },
   "homepage": "https://github.com/zhengxs2018/js.tree",
   "repository": {
