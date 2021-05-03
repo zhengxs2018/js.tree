@@ -1,6 +1,8 @@
-import { isNil } from 'lodash'
+import { isNil, defaultTo } from 'lodash'
 
-import type { Row } from '../types'
+import type { ID, Row, Exporter } from '../types'
+
+import { ROOT_ID } from './constants'
 
 /**
  * 和 isNil 结果相反
@@ -37,4 +39,20 @@ export function popKey<T extends Row, U>(source: T, key: string, defaultValue?: 
   const value = source[key] as U
   delete source[key]
   return isNil(value) ? defaultValue : value
+}
+
+/**
+ * 数据导出，允许外部自定义根节点
+ *
+ * @public
+ *
+ * @param nodes - 包含所有层级的数据
+ * @param root  - 根节点，支持自定义函数
+ */
+export function exporter<T>(nodes: Record<ID, T[]>, root?: ID | Exporter<T>): T[] {
+  if (typeof root === 'function') {
+    return root(nodes) || []
+  }
+
+  return nodes[defaultTo(root, ROOT_ID)] || []
 }
