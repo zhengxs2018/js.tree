@@ -20,6 +20,17 @@ export type None = null | undefined
 export type Row = Record<string | number, unknown>
 
 /**
+ * 默认的节点对象
+ *
+ * @public
+ */
+export interface Node extends Row {
+  id: ID
+  parentId: ID
+  children: Node
+}
+
+/**
  * 数据导出
  *
  * @public
@@ -27,12 +38,15 @@ export type Row = Record<string | number, unknown>
 export type Exporter<T> = (nodes: Record<ID, T[]>) => T[]
 
 /**
- * 默认的节点对象
+ * filter 回调
  *
  * @public
  */
-export interface Node extends Row {
-  children: Node
-}
-
 export type Predicate<T> = (data: T) => boolean
+
+/**
+ * 节点转换
+ *
+ * @public
+ */
+export type Transform<T, S> = (data: T) => S | None
