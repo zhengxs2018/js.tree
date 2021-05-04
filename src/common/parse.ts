@@ -15,6 +15,8 @@ export type ParseOptions<T, S> = {
   childrenKey?: string
   /** 允许外部转换数据 */
   transform?: Transform<T, S>
+  /** 允许外部接管插入行为 */
+  insert?: (siblings: S[], node: S) => void
 }
 
 /** @public */
@@ -45,7 +47,9 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
   const idKey = defaultTo(options.idKey, ID_KEY)
   const parentKey = defaultTo(options.parentKey, PARENT_ID_KEY)
   const childrenKey = defaultTo(options.childrenKey, CHILDREN_KEY)
-  const transform = options.transform || ((x) => x as S)
+
+  const transform = defaultTo(options.transform, (x) => x as S)
+  const insert = defaultTo(options.insert, (siblings: S[], node: S) => siblings.push(node))
 
   const nodes: Record<ID, S> = {}
   const childNodes: Record<ID, S[]> = {}
@@ -61,7 +65,7 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
     assert(isNotNil(id), `id is required, in ${i}.`)
 
     // 数据结构转换
-    const node = transform(row)
+    const node = transform(row, i)
 
     // 支持过滤掉某些数据
     if (isNil(node)) continue
@@ -80,10 +84,9 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
     // 获取同级元素
     const siblings = childNodes[parentId]
     if (siblings) {
-      // todo: 可以在这里添加排序支持
-      siblings.push(node)
+      insert(siblings, node)
     } else {
-      childNodes[parentId] = [node]
+      insert((childNodes[parentId] = []), node)
     }
 
     // 为了方便外部根据ID获取节点信息
