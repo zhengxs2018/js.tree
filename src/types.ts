@@ -49,4 +49,4 @@ export type Predicate<T> = (data: T) => boolean
  *
  * @public
  */
-export type Transform<T, S> = (data: T) => S | None
+export type Transform<T, S> = (data: T, index: number) => S | None
