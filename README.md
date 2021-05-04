@@ -23,6 +23,11 @@
 - 内置 `filter/map` 树遍历快捷方法
 - `lodash` 是可选的，详见底部介绍
 
+## 文档
+
+- [toTree 行转树](./docs/toTree.md)
+- [二次封装](./docs/custom.md)
+
 ## 安装
 
 ```shell
@@ -43,15 +48,15 @@ const data = [
 ]
 
 const result = toTree(data, {
-  // 只有 null 或 undefined 才会将 root 改成 ROOT_ID
+  // parentId 为 null 或 undefined 时可选
   // 如果根ID不是 null 或 undefined，那就需要手动指定
   // 支持函数，动态返回
   root: ROOT_ID,
 
   // 不是所有的关系字段都叫这个
   // 这时就可以手动指定
-  idKey: 'id', // 默认: id
-  parentKey: 'parentId', // 默认：parentId
+  idKey: 'id', // 可选，默认: id
+  parentKey: 'parentId', // 可选，默认：parentId
 
   // 挂载子级的属性名称，默认：children
   childrenKey: 'children',

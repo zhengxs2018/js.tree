@@ -31,7 +31,7 @@
       "src/index.ts"
     ],
     "includeVersion": true,
-    "out": "docs",
+    "out": "docs/public/api",
     "excludePrivate": true,
     "excludeExternals": true
   },

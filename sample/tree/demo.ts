@@ -1,12 +1,13 @@
-import type { Node } from '../../src'
+import type { Row, Node, None, ID } from '../../src'
 import { Tree } from './tree'
 
-interface Item extends Node {
+interface Item extends Row {
+  id: number
+  parentId: None | ID
   title: string
-  children: Item
 }
 
-const data = [
+const data: Item[] = [
   {
     id: 10000,
     parentId: null,
@@ -34,16 +35,16 @@ const data = [
   }
 ]
 
-const tree = Tree.load<Item>(data)
+const tree = Tree.load<Node & Item>(data)
 
-// 获取完整的树结构数据
+// 获取一级及其子级数据
 console.log(tree.root())
 
 // 获取指定节点
-console.log(tree.get('11000')?.title === '财务设置')
+console.log(tree.get(11000)?.title === '财务设置')
 
 // 获取上级节点
-console.log(tree.parent('11000') === data[0])
+console.log(tree.parent(11000) === data[0])
 
-// 获取所有上级
-console.log(tree.parents('11000')[0] === data[0])
+// 获取上级，直到最顶级
+console.log(tree.parents(11000)[0] === data[0])
