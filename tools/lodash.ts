@@ -28,12 +28,40 @@ export function defaultTo<T>(value: T | undefined | null, defaultValue: T): T {
  *
  * @param object - 对象
  * @param value - 未知数据
+ */
+export function get<T extends Record<string, unknown>, K extends keyof T>(
+  object: T,
+  path: K
+): Exclude<T[K], undefined>
+
+/**
+ * 获取值
+ *
+ * like lodash/get
+ *
+ * @param object - 对象
+ * @param value - 未知数据
  * @param defaultValue - 默认值
  */
-export function get<T extends Record<string, D>, K extends keyof T, D>(
-  object: T | null | undefined,
+export function get<T extends Record<string, unknown>, K extends keyof T, D>(
+  object: T,
+  path: K,
+  defaultValue: D
+): Exclude<T[K], undefined>
+
+/**
+ * 获取值
+ *
+ * like lodash/get
+ *
+ * @param object - 对象
+ * @param value - 未知数据
+ * @param defaultValue - 默认值
+ */
+export function get<T extends Record<string, unknown>, K extends keyof T, D>(
+  object: T,
   path: K,
   defaultValue?: D
-): Exclude<T[K], undefined> | D {
-  return defaultTo(object[path], defaultValue)
+): Exclude<T[K], undefined> | D | undefined {
+  return defaultTo(object[path] as D, defaultValue)
 }
