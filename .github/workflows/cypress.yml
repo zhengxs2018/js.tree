@@ -1,6 +1,12 @@
 name: Cypress Tests using Cypress Docker Image
 
-on: [push]
+on:
+  push:
+    paths:
+      - src/**/*
+      - cypress/**/*
+      - cypress.json
+      - package.json
 
 jobs:
   cypress-run:
