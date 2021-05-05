@@ -1,0 +1,41 @@
+name: Cypress Tests
+
+on:
+  push:
+    paths:
+      - .github/workflows/cypress.yaml
+      - src/**/*
+      - cypress/**/*
+      - cypress.json
+      - package.json
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/cache@v2
+        id: yarn-and-build-cache
+        with:
+          path: |
+            ~/.cache/Cypress
+            build
+            node_modules
+          key: ${{ runner.os }}-node_modules-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-build-
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          install: false
+          runTests: false
+          record: true
+          parallel: true
+          browser: chrome
+          group: "UI - Chrome"
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
