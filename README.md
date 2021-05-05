@@ -35,12 +35,7 @@
 - [修改内容](./docs/operators/map.md)
 - [二次封装](./docs/advanced/custom.md)
 
-## 文档
-
-- [toTree 行转树](./docs/toTree.md)
-- [二次封装](./docs/custom.md)
-
-## 安装
+### 安装
 
 ```shell
 $ npm i @zhengxs/js.tree --save
