@@ -1,4 +1,4 @@
-import { isNil, defaultTo } from 'lodash'
+import { isNil, get, defaultTo } from 'lodash'
 
 import type { ID, Row, Node, Transform } from '../types'
 
@@ -43,7 +43,10 @@ export type ParseResult<S> = {
  * @param data    - 行数据
  * @param options - 配置项
  */
-export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOptions<T, S> = {}): ParseResult<S> {
+export function parse<S = Node, T extends Row = Row>(
+  data: T[],
+  options: ParseOptions<T, S> = {}
+): ParseResult<S> {
   const idKey = defaultTo(options.idKey, ID_KEY)
   const parentKey = defaultTo(options.parentKey, PARENT_ID_KEY)
   const childrenKey = defaultTo(options.childrenKey, CHILDREN_KEY)
@@ -59,7 +62,7 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
     const row = data[i] as T
 
     // 获取节点ID
-    const id = row[idKey] as ID
+    const id = get(row, idKey) as ID
 
     // id 必须存在
     assert(isNotNil(id), `id is required, in ${i}.`)
@@ -73,13 +76,14 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
     // 获取子级元素
     const children = childNodes[id]
     if (children) {
-      (node as Row)[childrenKey] = children
+      ;(node as Row)[childrenKey] = children
     } else {
       childNodes[id] = (node as Row)[childrenKey] = []
     }
 
     // 获取上级节点ID
-    const parentId = defaultTo(row[parentKey], ROOT_ID) as ID
+    //  注意: 不能使用 _.get 的 `defaultValue` 参数， 那个只有不存在 `key` 才会返回默认值
+    const parentId = defaultTo(get(row, parentKey), ROOT_ID) as ID
 
     // 获取同级元素
     const siblings = childNodes[parentId]
@@ -101,5 +105,3 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
     childNodes
   }
 }
-
-

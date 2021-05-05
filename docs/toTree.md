@@ -93,8 +93,12 @@ const data = [
 ]
 
 const result = toTree(data, {
+  // lodash 版本，支持 path，如: nested.id
   idKey: 'sid', // 可选，默认: id
+
+  // lodash 版本，支持 path，如: nested.parentId
   parentKey: 'pid', // 可选，默认：parentId
+
   childrenKey: 'items' // 可选，默认：children
 })
 // ->
@@ -104,6 +108,35 @@ const result = toTree(data, {
 //     sub: 1,
 //     pid: null,
 //     items: [{ sid: 3, pid: 1, items: [] }]
+//   }
+// ]
+```
+
+**使用 lodash 版本可以支持 path**
+
+```js
+import { toTree } from '@zhengxs/js.tree'
+
+const data = [
+  { title: '标题 1', nested: { id: 10000, parentId: null } },
+  { title: '标题 2', nested: { id: 20000, parentId: null } },
+  { title: '标题 1-1', nested: { id: 11000, parentId: 10000 } }
+]
+
+const result = toTree(data, {
+  // 详见说明：https://lodash.com/docs/#get
+  idKey: 'nested.id',
+  parentKey: 'nested.parentId'
+})
+// ->
+// [
+//   { title: '标题 2', nested: { id: 20000, parentId: null }, children: [] },
+//   {
+//     title: '标题 1',
+//     nested: { id: 10000, parentId: null },
+//     children: [
+//       { title: '标题 1-1', nested: { id: 11000, parentId: 10000 }, children: []  }
+//     ]
 //   }
 // ]
 ```

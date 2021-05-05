@@ -35,6 +35,6 @@
     "excludePrivate": true,
     "excludeExternals": true
   },
-  "include": ["src/**/*", "test/view.spec.ts"],
+  "include": ["src/**/*"],
   "exclude": ["**/*.test.ts", "**/*.spec.ts"],
 }

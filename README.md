@@ -55,7 +55,11 @@ const result = toTree(data, {
 
   // 不是所有的关系字段都叫这个
   // 这时就可以手动指定
+
+  // lodash 版本，支持 path, 如: nested.id
   idKey: 'id', // 可选，默认: id
+
+  // lodash 版本，支持 path, 如: nested.parentId
   parentKey: 'parentId', // 可选，默认：parentId
 
   // 挂载子级的属性名称，默认：children
