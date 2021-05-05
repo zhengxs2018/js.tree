@@ -139,8 +139,6 @@ const result = toTree(data, {
 // ]
 ```
 
-**Try on RunKit**
-
 <a href="https://runkit.com/zhengxs2018/js.tree">
   <img src="https://static.runkitcdn.com/assets/images/brand/horizontal-logo-full.svg" height="44" alt="Try on RunKit">
 </a>
