@@ -1,4 +1,9 @@
-# [0.1.0-rc4](https://github.com/zhengxs2018/js.tree/compare/v0.1.0-rc3...v0.1.0-rc4) (2021-05-04)
+# [0.1.0-rc5](https://github.com/zhengxs2018/js.tree/compare/v0.1.0-rc3...v0.1.0-rc5) (2021-05-05)
+
+
+### Features
+
+* **totree:** lodash 版本的 idKey 和 parentKey 支持 path ([6d7f436](https://github.com/zhengxs2018/js.tree/commit/6d7f43679db3fc0b7194f850776db084af7706f8))
 
 
 
