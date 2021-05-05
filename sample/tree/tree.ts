@@ -63,6 +63,8 @@ export class Tree<S extends Node = Node> {
    * 根据ID获取节点
    *
    * @public
+   *
+   * @param id - 节点ID
    */
   get(id: ID): S | undefined {
     return this.#nodes[id]
@@ -72,6 +74,8 @@ export class Tree<S extends Node = Node> {
    * 获取指定ID的直接上级
    *
    * @public
+   *
+   * @param id - 节点ID
    */
   parent(id: ID): S | undefined {
     const node = this.get(id)
@@ -82,6 +86,8 @@ export class Tree<S extends Node = Node> {
    * 获取指定ID的所有上级
    *
    * @public
+   *
+   * @param id - 节点ID
    */
   parents(id: ID): S[] {
     const parentNodes: S[] = []
@@ -100,29 +106,32 @@ export class Tree<S extends Node = Node> {
    *
    * @public
    *
-   * @param callback
+   * @param callback - 回调函数
    */
-  filter(callback: (data: S, index: number, parents: S[]) => boolean) {
+  filter(callback: (data: S, index: number, parents: S[]) => boolean): S[] {
     return filter<S>(this.root(), callback, this.childrenKey)
   }
 
   /**
    * 获取指定节点的上级ID
+   *
+   * @param node - 节点对象
+   * @param parentKey - 上级ID属性
    */
-  static parentId<T extends Node = Node>(node: T, parentKey: string = 'parentId') {
+  static parentId<T extends Node>(node: T, parentKey = 'parentId'): ID {
     return defaultTo(node[parentKey] as ID, ROOT_ID)
   }
 
   /**
    * 加载数据
    *
-   * @param data
-   * @param options
+   * @param data - 一纬数组
+   * @param options - 可选配置
    */
   static load<S extends Node = Node, T extends Row = Row>(
     data: T[],
     options: ToTreeOptions<S, T> = {}
-  ) {
-    return new Tree(parse(data, options), options.root)
+  ): Tree<S> {
+    return new Tree<S>(parse(data, options), options.root)
   }
 }

@@ -30,11 +30,10 @@ export function defaultTo<T>(value: T | undefined | null, defaultValue: T): T {
  * @param value - 未知数据
  * @param defaultValue - 默认值
  */
-export function get<T extends object, K extends keyof T, D>(
+export function get<T extends Record<string, D>, K extends keyof T, D>(
   object: T | null | undefined,
   path: K,
   defaultValue?: D
 ): Exclude<T[K], undefined> | D {
-  // @ts-ignore
   return defaultTo(object[path], defaultValue)
 }

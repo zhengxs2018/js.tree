@@ -16,8 +16,6 @@
 
 快速，轻量，无依赖的树结构数据处理函数库。
 
-## 特点
-
 - 一个循环解决行转树的问题
 - 转树除了添加 `children` 属性，不会修改任何数据
 - 支持任意关系字段，如：非 id，parentId, children 字段支持
@@ -25,7 +23,9 @@
 - 支持动态导出树节点
 - 内置 `filter/map` 函数
 
-## 文档
+## 快速开始
+
+### 文档
 
 - [行转树](./docs/transform/toTree.md)
 - [树转行](./docs/transform/toRows.md)
@@ -33,13 +33,13 @@
 - [修改内容](./docs/operators/map.md)
 - [二次封装](./docs/advanced/custom.md)
 
-## 安装
+### 安装
 
 ```shell
 $ npm i @zhengxs/js.tree --save
 ```
 
-## 使用
+### 使用
 
 ```js
 import { toTree } from '@zhengxs/js.tree'

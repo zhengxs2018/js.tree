@@ -80,20 +80,24 @@ const data = [
   }
 ]
 
-const result = map(data, (node, index, parents) => {
-  if (node.title === '财务') {
-    // 可以返回空的子节点，停止处理子级
+const result = map(
+  data,
+  (node, index, parents) => {
+    if (node.title === '财务') {
+      // 可以返回空的子节点，停止处理子级
+      // 已经做过浅拷贝，修改不会改变原始对象
+      node.children = []
+      return node
+    }
+
     // 已经做过浅拷贝，修改不会改变原始对象
-    node.children = []
+    node.title = node.title + '测试'
+
+    // 必须返回内容
     return node
-  }
-
-  // 已经做过浅拷贝，修改不会改变原始对象
-  node.title = node.title + '测试'
-
-  // 必须返回内容
-  return node
-}, 'items')
+  },
+  'items'
+)
 // ->
 // [
 //   {

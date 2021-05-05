@@ -76,7 +76,8 @@ export function parse<S = Node, T extends Row = Row>(
     // 获取子级元素
     const children = childNodes[id]
     if (children) {
-      ;(node as Row)[childrenKey] = children
+      // @ts-ignore
+      node[childrenKey] = children
     } else {
       childNodes[id] = (node as Row)[childrenKey] = []
     }
