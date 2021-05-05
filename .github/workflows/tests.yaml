@@ -21,7 +21,7 @@ jobs:
       - name: 安装 Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '10.x'
+          node-version: '12.x'
       - name: 安装依赖
         run: yarn --frozen-lockfile
       - name: 运行代码检查
