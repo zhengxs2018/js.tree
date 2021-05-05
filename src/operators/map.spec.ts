@@ -1,4 +1,4 @@
-import { deepStrictEqual } from 'power-assert'
+import { deepStrictEqual } from 'assert'
 
 import { map } from './map'
 
