@@ -1,16 +1,18 @@
 # @zhengxs/js.tree
 
-[![lang](https://img.shields.io/badge/lang-typescript-informational)](https://www.typescriptlang.org/)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![npm version](https://img.shields.io/npm/v/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Downloads](https://img.shields.io/npm/dt/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Downloads](https://img.shields.io/npm/dm/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Gzip Size](http://img.badgesize.io/https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip)](https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js)
+[![lang](https://img.shields.io/badge/lang-typescript-informational?style=flat)](https://www.typescriptlang.org/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
+[![npm version](https://img.shields.io/npm/v/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
+[![Downloads](https://img.shields.io/npm/dt/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
+[![Downloads](https://img.shields.io/npm/dm/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
+[![Gzip Size](http://img.badgesize.io/https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip&style=flat)](https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js)
 [![codecov](https://codecov.io/gh/zhengxs2018/js.tree/branch/main/graph/badge.svg?token=JBYVAK2RRG)](https://codecov.io/gh/zhengxs2018/js.tree)
 [![Dependency Status](https://david-dm.org/zhengxs2018/js.tree.SVG)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
 [![devDependency Status](https://david-dm.org/zhengxs2018/js.tree/dev-status.svg)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
-[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg)](#typescript)
-![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+[![js.tree](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/dtcor7/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/dtcor7/runs)
+[![Node.js CI](https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml/badge.svg)](https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml)
+[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?style=flat)](#typescript)
+![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)
 
 > `lodash` 是可选的，详见 [对不同构建版本的解释](#对不同构建版本的解释)
 
@@ -136,6 +138,12 @@ const result = toTree(data, {
 //   }
 // ]
 ```
+
+**Try on RunKit**
+
+<a href="https://runkit.com/zhengxs2018/js.tree">
+  <img src="https://static.runkitcdn.com/assets/images/brand/horizontal-logo-full.svg" height="44" alt="Try on RunKit">
+</a>
 
 ## TypeScript
 

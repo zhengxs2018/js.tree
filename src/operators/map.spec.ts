@@ -34,7 +34,7 @@ describe('operators/filter.js', function () {
       }
     ]
 
-    deepStrictEqual(result, expected, '数据不一致')
+    deepStrictEqual(result, expected)
   })
 
   it('test map(childrenKey="items")', function () {
@@ -72,6 +72,6 @@ describe('operators/filter.js', function () {
       }
     ]
 
-    deepStrictEqual(result, expected, '数据不一致')
+    deepStrictEqual(result, expected)
   })
 })

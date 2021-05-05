@@ -4,6 +4,10 @@ node_modules
 
 coverage
 
+cypress/videos/
+cypress/results/
+cypress/screenshots/
+
 # Log files
 npm-debug.log*
 yarn-debug.log*
@@ -13,5 +17,6 @@ yarn-error.log*
 .history/
 
 dist/
-docs/public/
 temp/
+docs/public/api
+

@@ -1,8 +1,8 @@
-import { deepStrictEqual } from 'assert'
+/// <reference types="cypress" />
 
-import { toTree } from './toTree'
+import { toTree } from '../../src/index'
 
-describe('transform/toTree.js', function () {
+context('transform/toTree.js', function () {
   it('test toTree()', function () {
     const result = toTree([
       { id: 2, parentId: null },
@@ -15,7 +15,7 @@ describe('transform/toTree.js', function () {
       { id: 2, parentId: null, children: [] }
     ]
 
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 
   it('test toTree(root = 0)', function () {
@@ -33,7 +33,7 @@ describe('transform/toTree.js', function () {
       { id: 2, parentId: 0, children: [] }
     ]
 
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 
   it('test toTree(root = fn)', function () {
@@ -48,7 +48,7 @@ describe('transform/toTree.js', function () {
 
     const expected = [{ id: 3, parentId: 1, children: [] }]
 
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 
   it('test toTree(idKey=sub)', function () {
@@ -66,7 +66,7 @@ describe('transform/toTree.js', function () {
       { sub: 2, parentId: null, children: [] }
     ]
 
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 
   it('test toTree(parentKey=pid)', function () {
@@ -84,7 +84,7 @@ describe('transform/toTree.js', function () {
       { id: 2, pid: null, children: [] }
     ]
 
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 
   it('test toTree(childrenKey=items)', function () {
@@ -102,7 +102,7 @@ describe('transform/toTree.js', function () {
       { id: 2, parentId: null, items: [] }
     ]
 
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 
   it('test toTree(transform)', function () {
@@ -130,6 +130,6 @@ describe('transform/toTree.js', function () {
       }
     ]
 
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 })
