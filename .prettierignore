@@ -4,3 +4,5 @@ dist/
 docs/public/
 coverage/
 temp/
+
+CHANGELOG.md

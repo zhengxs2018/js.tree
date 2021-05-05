@@ -1,7 +1,16 @@
+# 二次封装
+
+可以在导出 `parse` 函数上进行二次封装。
+
+将转换和查找封装成一个类，传递 `id` 查找上级或子级节点。
+
+**tree.ts**
+
+```ts
 import { defaultTo } from 'lodash'
 
-import { ROOT_ID, parse, exporter, filter } from '../../src'
-import type { ID, Row, Node, ToTreeOptions, Exporter, ParseResult } from '../../src'
+import { ROOT_ID, parse, exporter, filter } from '@zhengxs/js.tree'
+import type { ID, Row, Node, ToTreeOptions, Exporter, ParseResult } from '@zhengxs/js.tree'
 
 export class Tree<S extends Node = Node> {
   /**
@@ -63,8 +72,6 @@ export class Tree<S extends Node = Node> {
    * 根据ID获取节点
    *
    * @public
-   *
-   * @param id - 节点ID
    */
   get(id: ID): S | undefined {
     return this.#nodes[id]
@@ -74,8 +81,6 @@ export class Tree<S extends Node = Node> {
    * 获取指定ID的直接上级
    *
    * @public
-   *
-   * @param id - 节点ID
    */
   parent(id: ID): S | undefined {
     const node = this.get(id)
@@ -86,8 +91,6 @@ export class Tree<S extends Node = Node> {
    * 获取指定ID的所有上级
    *
    * @public
-   *
-   * @param id - 节点ID
    */
   parents(id: ID): S[] {
     const parentNodes: S[] = []
@@ -106,32 +109,103 @@ export class Tree<S extends Node = Node> {
    *
    * @public
    *
-   * @param callback - 回调函数
+   * @param callback
    */
-  filter(callback: (data: S, index: number, parents: S[]) => boolean): S[] {
+  filter(callback: (data: S, index: number, parents: S[]) => boolean) {
     return filter<S>(this.root(), callback, this.childrenKey)
   }
 
   /**
    * 获取指定节点的上级ID
-   *
-   * @param node - 节点对象
-   * @param parentKey - 上级ID属性
    */
-  static parentId<T extends Node>(node: T, parentKey = 'parentId'): ID {
+  static parentId<T extends Node = Node>(node: T, parentKey: string = 'parentId') {
     return defaultTo(node[parentKey] as ID, ROOT_ID)
   }
 
   /**
    * 加载数据
    *
-   * @param data - 一纬数组
-   * @param options - 可选配置
+   * @param data
+   * @param options
    */
   static load<S extends Node = Node, T extends Row = Row>(
     data: T[],
     options: ToTreeOptions<S, T> = {}
-  ): Tree<S> {
-    return new Tree<S>(parse(data, options), options.root)
+  ) {
+    return new Tree(parse(data, options), options.root)
   }
 }
+```
+
+**demo.ts**
+
+```ts
+import type { Row, Node, None, ID } from '@zhengxs/js.tree'
+import { Tree } from './tree'
+
+interface Item extends Row {
+  id: number
+  parentId: None | ID
+  title: string
+}
+
+const data: Item[] = [
+  {
+    id: 10000,
+    parentId: null,
+    title: '财务'
+  },
+  {
+    id: 11000,
+    parentId: 10000,
+    title: '财务设置'
+  },
+  {
+    id: 20000,
+    parentId: null,
+    title: '站点设置'
+  },
+  {
+    id: 21000,
+    parentId: 20000,
+    title: '菜单维护'
+  },
+  {
+    id: 22000,
+    parentId: 20000,
+    title: '角色维护'
+  }
+]
+
+const tree = Tree.load<Node & Item>(data)
+
+// 获取一级及其子级数据
+console.log(tree.root())
+
+// 获取指定节点
+console.log(tree.get(11000)?.title === '财务设置')
+
+// 获取上级节点
+console.log(tree.parent(11000))
+// ->
+// [
+//   {
+//     id: 10000,
+//     parentId: null,
+//     title: '财务',
+//     children: [...]
+//   }
+// ]
+
+// 获取上级，直到最顶级
+console.log(tree.parents(11000))
+// ->
+// [
+//   {
+//     id: 10000,
+//     parentId: null,
+//     title: '财务',
+//     children: [...]
+//   }
+// ]
+```

@@ -1,6 +1,6 @@
-import { deepStrictEqual } from 'assert'
+/// <reference types="cypress" />
 
-import { toRows } from './toRows'
+import { toRows } from '../../src/index'
 
 describe('transform/toRows.js', function () {
   it('test toRows()', function () {
@@ -10,12 +10,12 @@ describe('transform/toRows.js', function () {
     ])
 
     const expected = [
-      { id: 2, parentId: null },
       { id: 1, parentId: null },
-      { id: 3, parentId: 1 }
+      { id: 3, parentId: 1 },
+      { id: 2, parentId: null }
     ]
 
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 
   it('test toRows(children=items)', function () {
@@ -28,10 +28,10 @@ describe('transform/toRows.js', function () {
     )
 
     const expected = [
-      { id: 2, parentId: null },
       { id: 1, parentId: null },
-      { id: 3, parentId: 1 }
+      { id: 3, parentId: 1 },
+      { id: 2, parentId: null }
     ]
-    deepStrictEqual(result, expected)
+    expect(result).to.deep.equal(expected)
   })
 })

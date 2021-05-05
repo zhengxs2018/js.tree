@@ -1,6 +1,6 @@
 import { isNil, defaultTo } from 'lodash'
 
-import type { ID, Row, Exporter } from '../types'
+import type { ID, Exporter } from '../types'
 
 import { ROOT_ID } from './constants'
 
@@ -31,14 +31,42 @@ export function assert(value: boolean, message: string | Error): never | void {
 /**
  * 删除对象的 key，并返回它的值
  *
+ * @param object       - 普通对象
+ * @param key          - 属性名
+ * @param defaultValue - 默认值
+ */
+export function popKey<T extends Record<string, unknown>, K extends keyof T, U>(
+  object: T,
+  key: K,
+  defaultValue: U
+): U
+
+/**
+ * 删除对象的 key，并返回它的值
+ *
+ * @param object       - 普通对象
+ * @param key          - 属性名
+ */
+export function popKey<T extends Record<string, unknown>, K extends keyof T, U>(
+  object: T,
+  key: K
+): U
+
+/**
+ * 删除对象的 key，并返回它的值
+ *
  * @param source       - 普通对象
  * @param key          - 属性名
  * @param defaultValue - 默认值
  */
-export function popKey<T extends Row, U>(source: T, key: string, defaultValue?: U): U | undefined {
-  const value = source[key] as U
-  delete source[key]
-  return isNil(value) ? defaultValue : value
+export function popKey<T extends Record<string, unknown>, K extends keyof T, U>(
+  object: T,
+  key: K,
+  defaultValue?: U
+): U | undefined {
+  const value = object[key] as U
+  delete object[key]
+  return defaultTo(value, defaultValue)
 }
 
 /**
@@ -55,4 +83,21 @@ export function exporter<T>(nodes: Record<ID, T[]>, root?: ID | Exporter<T>): T[
   }
 
   return nodes[defaultTo(root, ROOT_ID)] || []
+}
+
+/**
+ * 数组循环
+ *
+ * @param data - 数组
+ * @param callback - 回调函数，返回 false 停止循环
+ */
+export function each<T>(
+  data: T[],
+  callback: (value: T, index: number) => boolean | void
+): void {
+  let i = data.length
+
+  while (i--) {
+    if (callback(data[i] as T, i) === false) break
+  }
 }

@@ -10,6 +10,9 @@ export { exporter } from './common/utils'
 export { parse, ParseOptions, ParseResult } from './common/parse'
 export { ROOT_ID, ID_KEY, PARENT_ID_KEY, CHILDREN_KEY } from './common/constants'
 
-export default {
-  version: '__VERSION__'
-}
+/**
+ * 发布版本
+ *
+ * @public
+ */
+export const version = '__VERSION__'

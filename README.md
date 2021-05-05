@@ -1,27 +1,39 @@
 # @zhengxs/js.tree
 
-[![lang](https://img.shields.io/badge/lang-typescript-informational)](https://www.typescriptlang.org/)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![npm version](https://img.shields.io/npm/v/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Downloads](https://img.shields.io/npm/dt/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Downloads](https://img.shields.io/npm/dm/%40zhengxs%2Fjs.tree.svg)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Gzip Size](http://img.badgesize.io/https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip)](https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js)
+[![lang](https://img.shields.io/badge/lang-typescript-informational?style=flat)](https://www.typescriptlang.org/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
+[![npm version](https://img.shields.io/npm/v/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
+[![Downloads](https://img.shields.io/npm/dt/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
+[![Downloads](https://img.shields.io/npm/dm/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
+[![Gzip Size](http://img.badgesize.io/https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip&style=flat)](https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js)
 [![codecov](https://codecov.io/gh/zhengxs2018/js.tree/branch/main/graph/badge.svg?token=JBYVAK2RRG)](https://codecov.io/gh/zhengxs2018/js.tree)
 [![Dependency Status](https://david-dm.org/zhengxs2018/js.tree.SVG)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
 [![devDependency Status](https://david-dm.org/zhengxs2018/js.tree/dev-status.svg)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
-[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg)](#typescript)
-![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+[![js.tree](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/dtcor7/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/dtcor7/runs)
+[![Node.js CI](https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml/badge.svg)](https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml)
+[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?style=flat)](#typescript)
+![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)
+
+> `lodash` 是可选的，详见 [对不同构建版本的解释](#对不同构建版本的解释)
 
 快速，轻量，无依赖的树结构数据处理函数库。
 
-## 特点
-
 - 一个循环解决行转树的问题
 - 转树除了添加 `children` 属性，不会修改任何数据
-- 支持任意关系字段，如：id，parentId, children 字段
+- 支持任意关系字段，如：非 id，parentId, children 字段支持
+- 支持接管插入行为，如：自定义插入顺序
 - 支持动态导出树节点
-- 内置 `filter/map` 树遍历快捷方法
-- `lodash` 是可选的，详见底部介绍
+- 内置 `filter/map` 函数
+
+## 快速开始
+
+### 文档
+
+- [行转树](./docs/transform/toTree.md)
+- [树转行](./docs/transform/toRows.md)
+- [过滤内容](./docs/operators/filter.md)
+- [修改内容](./docs/operators/map.md)
+- [二次封装](./docs/advanced/custom.md)
 
 ## 文档
 
@@ -34,17 +46,39 @@
 $ npm i @zhengxs/js.tree --save
 ```
 
-## 使用
+### 使用
 
-**行转树**
+```js
+import { toTree } from '@zhengxs/js.tree'
+
+toTree([
+  { id: 10000, parentId: null, title: '标题 1' },
+  { id: 20000, parentId: null, title: '标题 2' },
+  { id: 11000, parentId: 10000, title: '标题 1-1' }
+])
+// ->
+// [
+//   { id: 20000, parentId: null, title: '标题 2', children: [] },
+//   {
+//     id: 10000,
+//     parentId: null,
+//     title: '标题 1',
+//     children: [
+//       { id: 11000, parentId: 10000, title: '标题 1-1', children: [] }
+//     ]
+//   }
+// ]
+```
+
+支持任意关系字段的数据
 
 ```js
 import { toTree, ROOT_ID } from '@zhengxs/js.tree'
 
 const data = [
-  { id: 2, parentId: null },
-  { id: 3, parentId: 1 },
-  { id: 1, parentId: null }
+  { uid: 10000, pid: null, title: '标题 1', sort: 1 },
+  { uid: 20000, pid: null, title: '标题 2', sort: 2 },
+  { uid: 11000, pid: 10000, title: '标题 1-1', sort: 3 }
 ]
 
 const result = toTree(data, {
@@ -53,142 +87,66 @@ const result = toTree(data, {
   // 支持函数，动态返回
   root: ROOT_ID,
 
-  // 不是所有的关系字段都叫这个
-  // 这时就可以手动指定
-  idKey: 'id', // 可选，默认: id
-  parentKey: 'parentId', // 可选，默认：parentId
+  // lodash 版本，支持 path, 如: nested.id
+  idKey: 'uid', // 可选，默认: id
+
+  // lodash 版本，支持 path, 如: nested.parentId
+  parentKey: 'pid', // 可选，默认：parentId
 
   // 挂载子级的属性名称，默认：children
-  childrenKey: 'children',
+  childrenKey: 'items',
+
+  // 接管插入行为
+  insert(siblings, node) {
+    const index = siblings.findIndex((n) => n.sort > node.sort)
+
+    if (index === -1) {
+      siblings.push(node)
+    } else {
+      siblings.splice(index, 0, node)
+    }
+  },
 
   // 数据添加进 children 数组前的处理，默认：undefined
   transform(data) {
-    // 可以通过 Object.create 创建
-    // 这样可以避免修改原始数据，同时又能共享原型
-    return Object.create(data)
+    // 通过浅拷贝避免修改原始数据
+    // 可以在这里动态添加属性
+    return { ...data, checked: false }
   }
 })
 // ->
 // [
-//   { id: 2, parentId: null, children: [] },
 //   {
-//     id: 1,
-//     parentId: null,
-//     children: [{ id: 3, parentId: 1, children: [] }]
-//   }
-// ]
-```
-
-**树转行**
-
-```js
-import { toRows } from '@zhengxs/js.tree'
-
-const data = [
-  { id: 2, parentId: null, children: [] },
-  {
-    id: 1,
-    parentId: null,
-    children: [{ id: 3, parentId: 1, children: [] }]
-  }
-]
-
-// 如果不是 children 属性，可以通过第二个参数指定，可选
-const result = toRows(data, 'children')
-// ->
-// [
-//   { id: 2, parentId: null },
-//   { id: 3, parentId: 1 },
-//   { id: 1, parentId: null }
-// ]
-```
-
-**内容过滤**
-
-```js
-import { filter } from '@zhengxs/js.tree'
-
-const data = [
-  {
-    title: '财务',
-    children: [{ title: '收入流失' }, { title: '财务设置' }]
-  },
-  {
-    title: '站点设置',
-    children: [{ title: '菜单维护' }, { title: '角色维护' }]
-  }
-]
-
-// 如果不是 children 属性，可以通过第二个参数指定，可选
-const result = filter(data, (node, index, parents) => {
-  return node.title.indexOf('设置') > -1
-})
-// ->
-// [
-//   {
-//     title: '财务',
-//     children: [
-//       { title: '财务设置' }
+//     uid: 10000,
+//     pid: null,
+//     title: '标题 1',
+//     sort: 1,
+//     checked: false,
+//     items: [
+//       {
+//         uid: 11000,
+//         pid: 10000,
+//         title: '标题 1-1',
+//         sort: 3,
+//         checked: false,
+//         items: []
+//       }
 //     ]
 //   },
 //   {
-//     title: '站点设置',
-//     children: [
-//       { title: '菜单维护' },
-//       { title: '角色维护' }
-//     ]
+//     uid: 20000,
+//     pid: null,
+//     title: '标题 2',
+//     sort: 2,
+//     checked: false,
+//     items: []
 //   }
 // ]
-
-// 如果不是 children 属性，可以通过第三个参数指定，可选
-const result = filter(data, callback, 'items')
 ```
 
-**修改内容**
-
-```js
-import { map } from '@zhengxs/js.tree'
-
-const data = [
-  {
-    title: '财务',
-    children: [{ title: '收入流失' }, { title: '财务设置' }]
-  },
-  {
-    title: '站点设置',
-    children: [{ title: '菜单维护' }, { title: '角色维护' }]
-  }
-]
-
-const result = map(data, (node, index, parents) => {
-  if (node.title === '财务') {
-    // 可以返回空的子节点，停止处理子级
-    // 注意：参数浅拷贝，修改不会改变原始对象
-    node.children = []
-    return node
-  }
-
-  // 注意：参数浅拷贝，修改不会改变原始对象
-  node.title = node.title + '测试'
-
-  // 必须返回内容
-  return node
-})
-// ->
-// [
-//   {
-//     title: '财务',
-//     children: []
-//   },
-//   {
-//     title: '站点设置测试',
-//     children: [{ title: '菜单维护测试' }, { title: '角色维护测试' }]
-//   }
-// ]
-
-// 如果不是 children 属性，可以通过第三个参数指定，可选
-const result = map(data, callback, 'items')
-```
+<a href="https://runkit.com/zhengxs2018/js.tree">
+  <img src="https://static.runkitcdn.com/assets/images/brand/horizontal-logo-full.svg" height="44" alt="Try on RunKit">
+</a>
 
 ## TypeScript
 

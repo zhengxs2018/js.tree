@@ -1,8 +1,8 @@
-import { isNil, defaultTo } from 'lodash'
+import { isNil, get, defaultTo } from 'lodash'
 
 import type { ID, Row, Node, Transform } from '../types'
 
-import { assert, isNotNil } from './utils'
+import { assert, isNotNil, each } from './utils'
 import { ROOT_ID, ID_KEY, PARENT_ID_KEY, CHILDREN_KEY } from './constants'
 
 /** @public */
@@ -43,7 +43,10 @@ export type ParseResult<S> = {
  * @param data    - 行数据
  * @param options - 配置项
  */
-export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOptions<T, S> = {}): ParseResult<S> {
+export function parse<S = Node, T extends Row = Row>(
+  data: T[],
+  options: ParseOptions<T, S> = {}
+): ParseResult<S> {
   const idKey = defaultTo(options.idKey, ID_KEY)
   const parentKey = defaultTo(options.parentKey, PARENT_ID_KEY)
   const childrenKey = defaultTo(options.childrenKey, CHILDREN_KEY)
@@ -54,12 +57,9 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
   const nodes: Record<ID, S> = {}
   const childNodes: Record<ID, S[]> = {}
 
-  let i = data.length
-  while (i--) {
-    const row = data[i] as T
-
+  each(data, (row, i) => {
     // 获取节点ID
-    const id = row[idKey] as ID
+    const id = get(row, idKey) as ID
 
     // id 必须存在
     assert(isNotNil(id), `id is required, in ${i}.`)
@@ -68,18 +68,20 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
     const node = transform(row, i)
 
     // 支持过滤掉某些数据
-    if (isNil(node)) continue
+    if (isNil(node)) return
 
     // 获取子级元素
     const children = childNodes[id]
     if (children) {
-      (node as Row)[childrenKey] = children
+      // @ts-ignore
+      node[childrenKey] = children
     } else {
       childNodes[id] = (node as Row)[childrenKey] = []
     }
 
     // 获取上级节点ID
-    const parentId = defaultTo(row[parentKey], ROOT_ID) as ID
+    //  注意: 不能使用 _.get 的 `defaultValue` 参数， 那个只有不存在 `key` 才会返回默认值
+    const parentId = defaultTo(get(row, parentKey), ROOT_ID) as ID
 
     // 获取同级元素
     const siblings = childNodes[parentId]
@@ -91,7 +93,7 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
 
     // 为了方便外部根据ID获取节点信息
     nodes[id] = node
-  }
+  })
 
   return {
     idKey,
@@ -101,5 +103,3 @@ export function parse<S = Node, T extends Row = Row>(data: T[], options: ParseOp
     childNodes
   }
 }
-
-
