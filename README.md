@@ -110,29 +110,29 @@ const result = toTree(data, {
 // ->
 // [
 //   {
-//     id: 10000,
-//     parentId: null,
+//     uid: 10000,
+//     pid: null,
 //     title: '标题 1',
 //     sort: 1,
 //     checked: false,
-//     children: [
+//     items: [
 //       {
-//         id: 11000,
-//         parentId: 10000,
+//         uid: 11000,
+//         pid: 10000,
 //         title: '标题 1-1',
 //         sort: 3,
 //         checked: false,
-//         children: []
+//         items: []
 //       }
 //     ]
 //   },
 //   {
-//     id: 20000,
-//     parentId: null,
+//     uid: 20000,
+//     pid: null,
 //     title: '标题 2',
 //     sort: 2,
 //     checked: false,
-//     children: []
+//     items: []
 //   }
 // ]
 ```
