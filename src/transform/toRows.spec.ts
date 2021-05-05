@@ -10,9 +10,9 @@ describe('transform/toRows.js', function () {
     ])
 
     const expected = [
+      { id: 2, parentId: null },
       { id: 1, parentId: null },
-      { id: 3, parentId: 1 },
-      { id: 2, parentId: null }
+      { id: 3, parentId: 1 }
     ]
 
     deepStrictEqual(result, expected)
@@ -28,9 +28,9 @@ describe('transform/toRows.js', function () {
     )
 
     const expected = [
+      { id: 2, parentId: null },
       { id: 1, parentId: null },
-      { id: 3, parentId: 1 },
-      { id: 2, parentId: null }
+      { id: 3, parentId: 1 }
     ]
     deepStrictEqual(result, expected)
   })

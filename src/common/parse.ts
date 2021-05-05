@@ -2,7 +2,7 @@ import { isNil, get, defaultTo } from 'lodash'
 
 import type { ID, Row, Node, Transform } from '../types'
 
-import { assert, isNotNil } from './utils'
+import { assert, isNotNil, each } from './utils'
 import { ROOT_ID, ID_KEY, PARENT_ID_KEY, CHILDREN_KEY } from './constants'
 
 /** @public */
@@ -57,10 +57,7 @@ export function parse<S = Node, T extends Row = Row>(
   const nodes: Record<ID, S> = {}
   const childNodes: Record<ID, S[]> = {}
 
-  let i = data.length
-  while (i--) {
-    const row = data[i] as T
-
+  each(data, (row, i) => {
     // 获取节点ID
     const id = get(row, idKey) as ID
 
@@ -71,7 +68,7 @@ export function parse<S = Node, T extends Row = Row>(
     const node = transform(row, i)
 
     // 支持过滤掉某些数据
-    if (isNil(node)) continue
+    if (isNil(node)) return
 
     // 获取子级元素
     const children = childNodes[id]
@@ -96,7 +93,7 @@ export function parse<S = Node, T extends Row = Row>(
 
     // 为了方便外部根据ID获取节点信息
     nodes[id] = node
-  }
+  })
 
   return {
     idKey,

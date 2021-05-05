@@ -1,4 +1,7 @@
+import { defaultTo } from 'lodash'
+
 import { CHILDREN_KEY } from '../common/constants'
+
 import type { Row } from '../types'
 
 /**
@@ -19,7 +22,7 @@ export function map<T extends Row, U extends Row>(
     return data.map((node, index) => {
       const source = callback({ ...node }, index, parents)
 
-      const children = iter((source[childrenKey] as T[]) || [], parents.concat(node))
+      const children = iter(defaultTo(source[childrenKey] as T[], []), parents.concat(node))
       if (children.length > 0) {
         return { ...source, [childrenKey]: children }
       }

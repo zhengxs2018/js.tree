@@ -1,4 +1,8 @@
+import { defaultTo } from 'lodash'
+
 import { CHILDREN_KEY } from '../common/constants'
+import { each } from '../common/utils'
+
 import type { Row } from '../types'
 
 /**
@@ -18,14 +22,15 @@ export function filter<T extends Row>(
   function iter(data: T[], parents: T[]): T[] {
     const items: T[] = []
 
-    data.forEach((node, index) => {
+    each(data, (node, index) => {
       if (callback(node, index, parents)) {
-        items.push({ ...node })
-      } else {
-        const children = iter((node[childrenKey] as T[]) || [], parents.concat(node))
-        if (children.length > 0) {
-          items.push({ ...node, [childrenKey]: children })
-        }
+        items.unshift({ ...node })
+        return
+      }
+
+      const children = iter(defaultTo(node[childrenKey] as T[], []), parents.concat(node))
+      if (children.length > 0) {
+        items.unshift({ ...node, [childrenKey]: children })
       }
     })
 
