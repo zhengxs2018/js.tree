@@ -119,7 +119,10 @@ export class Tree<S extends Node = Node> {
    * @param data
    * @param options
    */
-  static load<S extends Node = Node, T extends Row = Row>(data: T[], options: ToTreeOptions<S, T> = {}) {
+  static load<S extends Node = Node, T extends Row = Row>(
+    data: T[],
+    options: ToTreeOptions<S, T> = {}
+  ) {
     return new Tree(parse(data, options), options.root)
   }
 }

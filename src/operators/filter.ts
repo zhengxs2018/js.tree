@@ -22,7 +22,7 @@ export function filter<T extends Row>(
       if (callback(node, index, parents)) {
         items.push({ ...node })
       } else {
-        const children = iter(node[childrenKey] as T[] || [], parents.concat(node))
+        const children = iter((node[childrenKey] as T[]) || [], parents.concat(node))
         if (children.length > 0) {
           items.push({ ...node, [childrenKey]: children })
         }

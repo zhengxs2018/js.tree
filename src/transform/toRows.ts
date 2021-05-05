@@ -10,7 +10,10 @@ import type { Row } from '../types'
  * @param data        - 树结构数据
  * @param childrenKey - children 属性名
  */
-export function toRows<T extends Row, U extends Row>(data: T[], childrenKey: string = CHILDREN_KEY): U[] {
+export function toRows<T extends Row, U extends Row>(
+  data: T[],
+  childrenKey: string = CHILDREN_KEY
+): U[] {
   const result: U[] = []
 
   function callback(source: T) {

@@ -49,11 +49,11 @@ const umdConfig = merge(noLodash, {
     typescript({
       tsconfigOverride: {
         compilerOptions: {
-          target: "es5",
+          target: 'es5',
           module: 'es2015',
           declaration: false,
           declarationMap: false,
-          removeComments: true,
+          removeComments: true
         }
       }
     })

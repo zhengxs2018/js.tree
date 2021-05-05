@@ -35,7 +35,11 @@ export function assert(value: boolean, message: string | Error): never | void {
  * @param key          - 属性名
  * @param defaultValue - 默认值
  */
-export function popKey<T extends Row, U>(source: T, key: string, defaultValue?: U): U | undefined {
+export function popKey<T extends Row, U>(
+  source: T,
+  key: string,
+  defaultValue?: U
+): U | undefined {
   const value = source[key] as U
   delete source[key]
   return isNil(value) ? defaultValue : value
