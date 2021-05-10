@@ -2,7 +2,7 @@ import { isNil, get, defaultTo } from 'lodash'
 
 import type { ID, Row, Node, Transform } from '../types'
 
-import { assert, isNotNil, each } from './utils'
+import { assert, isNotNil } from './utils'
 import { ROOT_ID, ID_KEY, PARENT_ID_KEY, CHILDREN_KEY } from './constants'
 
 /** @public */
@@ -57,7 +57,7 @@ export function parse<S = Node, T extends Row = Row>(
   const nodes: Record<ID, S> = {}
   const childNodes: Record<ID, S[]> = {}
 
-  each(data, (row, i) => {
+  data.forEach((row, i) => {
     // 获取节点ID
     const id = get(row, idKey) as ID
 
