@@ -5,9 +5,9 @@ import { toTree } from './toTree'
 describe('transform/toTree.js', function () {
   it('test toTree()', function () {
     const result = toTree([
+      { id: 1, parentId: null },
       { id: 2, parentId: null },
       { id: 3, parentId: 1 },
-      { id: 1, parentId: null }
     ])
 
     const expected = [
@@ -21,9 +21,9 @@ describe('transform/toTree.js', function () {
   it('test toTree(root = 0)', function () {
     const result = toTree(
       [
+        { id: 1, parentId: 0 },
         { id: 2, parentId: 0 },
-        { id: 3, parentId: 1 },
-        { id: 1, parentId: 0 }
+        { id: 3, parentId: 1 }
       ],
       { root: 0 }
     )
@@ -39,9 +39,9 @@ describe('transform/toTree.js', function () {
   it('test toTree(root = fn)', function () {
     const result = toTree(
       [
+        { id: 1, parentId: 0 },
         { id: 2, parentId: 0 },
         { id: 3, parentId: 1 },
-        { id: 1, parentId: 0 }
       ],
       { root: (nodes) => nodes[1] || [] }
     )
@@ -54,9 +54,9 @@ describe('transform/toTree.js', function () {
   it('test toTree(idKey=sub)', function () {
     const result = toTree(
       [
+        { sub: 1, parentId: null },
         { sub: 2, parentId: null },
         { sub: 3, parentId: 1 },
-        { sub: 1, parentId: null }
       ],
       { idKey: 'sub' }
     )
@@ -72,9 +72,9 @@ describe('transform/toTree.js', function () {
   it('test toTree(parentKey=pid)', function () {
     const result = toTree(
       [
+        { id: 1, pid: null },
         { id: 2, pid: null },
         { id: 3, pid: 1 },
-        { id: 1, pid: null }
       ],
       { parentKey: 'pid' }
     )
@@ -90,9 +90,9 @@ describe('transform/toTree.js', function () {
   it('test toTree(childrenKey=items)', function () {
     const result = toTree(
       [
+        { id: 1, parentId: null },
         { id: 2, parentId: null },
         { id: 3, parentId: 1 },
-        { id: 1, parentId: null }
       ],
       { childrenKey: 'items' }
     )
@@ -112,11 +112,12 @@ describe('transform/toTree.js', function () {
       if (row.id === 2) return
       return { ...row, test: true }
     }
+
     const result = toTree(
       [
+        { id: 1, parentId: null },
         { id: 2, parentId: null },
         { id: 3, parentId: 1 },
-        { id: 1, parentId: null }
       ],
       { transform }
     )
