@@ -78,7 +78,7 @@ const data = [
 
 const result = toTree(data, {
   // 如果 parentId 为 null 或 undefined 会合并一起
-  // 使用放入 ROOT_ID 作为 key 保存
+  // 使用 ROOT_ID 作为 key 保存
   // 支持函数，动态返回
   root: ROOT_ID,
 
