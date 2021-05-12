@@ -53,7 +53,6 @@ toTree([
 ])
 // ->
 // [
-//   { id: 20000, parentId: null, title: '标题 2', children: [] },
 //   {
 //     id: 10000,
 //     parentId: null,
@@ -61,7 +60,8 @@ toTree([
 //     children: [
 //       { id: 11000, parentId: 10000, title: '标题 1-1', children: [] }
 //     ]
-//   }
+//   },
+//   { id: 20000, parentId: null, title: '标题 2', children: [] },
 // ]
 ```
 
@@ -77,8 +77,8 @@ const data = [
 ]
 
 const result = toTree(data, {
-  // parentId 为 null 或 undefined 时可选
-  // 如果根ID不是 null 或 undefined，那就需要手动指定
+  // 如果 parentId 为 null 或 undefined 会合并一起
+  // 使用放入 ROOT_ID 作为 key 保存
   // 支持函数，动态返回
   root: ROOT_ID,
 
@@ -93,6 +93,7 @@ const result = toTree(data, {
 
   // 接管插入行为
   insert(siblings, node) {
+    // ps: 任意层级的数据都是这样处理的
     const index = siblings.findIndex((n) => n.sort > node.sort)
 
     if (index === -1) {
@@ -138,6 +139,8 @@ const result = toTree(data, {
 //   }
 // ]
 ```
+
+<br />
 
 <a href="https://npm.runkit.com/@zhengxs/js.tree">
   <img src="https://static.runkitcdn.com/assets/images/brand/horizontal-logo-full.svg" height="44" alt="Try on RunKit">
