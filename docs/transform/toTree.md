@@ -19,22 +19,20 @@ toTree 的默认行为如下：
 ```js
 import { toTree } from '@zhengxs/js.tree'
 
-const data = [
-  { id: 2, parentId: null },
-  { id: 3, parentId: 1 },
-  { id: 1, parentId: null }
-]
-
 // 注意这会修改原始对象
-toTree(data)
+toTree([
+  { id: 1, parentId: null },
+  { id: 2, parentId: null },
+  { id: 3, parentId: 1 }
+])
 // ->
 // [
-//   { id: 2, parentId: null, children: [] },
 //   {
 //     id: 1,
 //     parentId: null,
 //     children: [{ id: 3, parentId: 1, children: [] }]
-//   }
+//   },
+//   { id: 2, parentId: null, children: [] }
 // ]
 ```
 
@@ -46,9 +44,9 @@ toTree(data)
 import { toTree } from '@zhengxs/js.tree'
 
 const data = [
+  { id: 1, parentId: 0 },
   { id: 2, parentId: 0 },
-  { id: 3, parentId: 1 },
-  { id: 1, parentId: 0 }
+  { id: 3, parentId: 1 }
 ]
 
 toTree(data, {
@@ -64,9 +62,9 @@ import { toTree, ROOT_ID } from '@zhengxs/js.tree'
 import type { ID, Node } from '@zhengxs/js.tree'
 
 const data = [
+  { id: 1, parentId: null },
   { id: 2, parentId: undefined },
-  { id: 3, parentId: 1 },
-  { id: 1, parentId: null }
+  { id: 3, parentId: 1 }
 ]
 
 toTree(data, {
@@ -87,35 +85,41 @@ toTree(data, {
 import { toTree } from '@zhengxs/js.tree'
 
 const data = [
+  { sid: 1, pid: null },
   { sid: 2, pid: null },
-  { sid: 3, pid: 1 },
-  { sid: 1, pid: null }
+  { sid: 3, pid: 1 }
 ]
 
 const result = toTree(data, {
   // lodash 版本，支持 path，如: nested.id
-  idKey: 'sid', // 可选，默认: id
-
+  // 可选，默认: id
+  idKey: 'sid',
   // lodash 版本，支持 path，如: nested.parentId
-  parentKey: 'pid', // 可选，默认：parentId
-
-  childrenKey: 'items' // 可选，默认：children
+  // 可选，默认：parentId
+  parentKey: 'pid',
+  // 可选，默认：children
+  childrenKey: 'items'
 })
 // ->
 // [
-//   { sid: 2, pid: null, items: [] },
 //   {
 //     sub: 1,
 //     pid: null,
 //     items: [{ sid: 3, pid: 1, items: [] }]
-//   }
+//   },
+//   { sid: 2, pid: null, items: [] }
 // ]
 ```
 
 **使用 lodash 版本可以支持 path**
 
+关于 lodash 版本，详见对[对不同构建版本的解释](../../README.md#对不同构建版本的解释)。
+
 ```js
-import { toTree } from '@zhengxs/js.tree'
+const { toTree } = require('@zhengxs/js.tree/dist/js.tree.common.lodash')
+
+// import { toTree } from '@zhengxs/js.tree/dist/js.tree.esm.lodash'
+// import { toTree } from '@zhengxs/js.tree/dist/js.tree.esm.lodash-es'
 
 const data = [
   { title: '标题 1', nested: { id: 10000, parentId: null } },
@@ -166,12 +170,64 @@ toTree(data, {
 })
 // ->
 // [
-//   { id: 2, parentId: null, checked: false, children: [] },
-//   { id: 1, parentId: null, checked: false, children: [] }
+//   { id: 1, parentId: null, checked: false, children: [] },
+//   { id: 2, parentId: null, checked: false, children: [] }
 // ]
 ```
 
 **注:** 修改会导致原始对象也被改变
+
+## 根据父级处理子级
+
+很多时候可能需要操作子级，但插件循环的时候是不知道有多少个子级的，只有处理完才知道。
+
+```js
+import { toTree } from '@zhengxs/js.tree'
+
+const data = [
+  { id: 1, parentId: null },
+  { id: 2, parentId: null },
+  { id: 3, parentId: 1 }
+]
+
+// 需要最后再处理一次的数据
+const postData = []
+
+// 结果数据
+const result = toTree(data, {
+  transform(row) {
+    // 返回 null 或 undefined 的数据会被过滤掉
+    if (row.id === 1) {
+      // 因为对象的引用
+      // 可以直接保存返回的数据
+      // 修改这个对象，也会改变结果的内容
+      postData.push(row)
+    }
+
+    return row
+  }
+})
+
+// 处理后续数据
+postData.forEach((node) => {
+  // 给子级添加一个属性
+  node.children.map((childNode) => {
+    childNode.hidden = true
+  })
+})
+
+// 打印结果
+console.log(result)
+// ->
+// [
+//   {
+//     id: 1,
+//     parentId: null,
+//     children: [{ id: 3, parentId: 1, hidden: true, children: [] }]
+//   },
+//   { id: 2, parentId: null, children: [] }
+// ]
+```
 
 ## 排序
 
@@ -191,6 +247,7 @@ toTree(data, {
   // 第一个参数是已经排序好的兄弟节点
   // 第二个参数是当前节点
   insert(siblings, node) {
+    // ps: 任意层级的数据都是这样处理的
     const index = siblings.findIndex((current) => {
       return current.sort > node.sort
     })
@@ -210,4 +267,4 @@ toTree(data, {
 // ]
 ```
 
-**注:** 配置后，内部不再做任何操作。
+**注:** 配置后，内部不再做插入操作。
