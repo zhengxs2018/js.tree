@@ -11,8 +11,8 @@ describe('transform/toRows.js', function () {
 
     const expected = [
       { id: 1, parentId: null },
-      { id: 2, parentId: null },
       { id: 3, parentId: 1 },
+      { id: 2, parentId: null },
     ]
 
     expect(result).to.deep.equal(expected)
@@ -29,8 +29,8 @@ describe('transform/toRows.js', function () {
 
     const expected = [
       { id: 1, parentId: null },
-      { id: 2, parentId: null },
       { id: 3, parentId: 1 },
+      { id: 2, parentId: null },
     ]
     expect(result).to.deep.equal(expected)
   })
