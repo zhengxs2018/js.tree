@@ -29,10 +29,12 @@
 
 ### 文档
 
-- [行转树](./docs/transform/toTree.md)
-- [树转行](./docs/transform/toRows.md)
-- [过滤内容](./docs/operators/filter.md)
-- [修改内容](./docs/operators/map.md)
+- 转换
+  - [toTree 行转树](./docs/transform/toTree.md)
+  - [toRows 树转行](./docs/transform/toRows.md)
+- 操作
+  - [filter 过滤内容](./docs/operators/filter.md)
+  - [map 修改内容](./docs/operators/map.md)
 - [二次封装](./docs/advanced/custom.md)
 
 ### 安装
