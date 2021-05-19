@@ -23,7 +23,7 @@ import { toTree } from '@zhengxs/js.tree'
 toTree([
   { id: 1, parentId: null },
   { id: 2, parentId: null },
-  { id: 3, parentId: 1 }
+  { id: 3, parentId: 1 },
 ])
 // ->
 // [
@@ -46,12 +46,12 @@ import { toTree } from '@zhengxs/js.tree'
 const data = [
   { id: 1, parentId: 0 },
   { id: 2, parentId: 0 },
-  { id: 3, parentId: 1 }
+  { id: 3, parentId: 1 },
 ]
 
 toTree(data, {
   // 支持任意字符串或数字
-  root: 0
+  root: 0,
 })
 ```
 
@@ -64,7 +64,7 @@ import type { ID, Node } from '@zhengxs/js.tree'
 const data = [
   { id: 1, parentId: null },
   { id: 2, parentId: undefined },
-  { id: 3, parentId: 1 }
+  { id: 3, parentId: 1 },
 ]
 
 toTree(data, {
@@ -73,7 +73,7 @@ toTree(data, {
     // parentId 是 null 或 undefined 被合并在一起
     // 使用 ROOT_ID 作为 key 在管理
     return childNodes[ROOT_ID]
-  }
+  },
 })
 ```
 
@@ -87,7 +87,7 @@ import { toTree } from '@zhengxs/js.tree'
 const data = [
   { sid: 1, pid: null },
   { sid: 2, pid: null },
-  { sid: 3, pid: 1 }
+  { sid: 3, pid: 1 },
 ]
 
 const result = toTree(data, {
@@ -98,7 +98,7 @@ const result = toTree(data, {
   // 可选，默认：parentId
   parentKey: 'pid',
   // 可选，默认：children
-  childrenKey: 'items'
+  childrenKey: 'items',
 })
 // ->
 // [
@@ -124,13 +124,13 @@ const { toTree } = require('@zhengxs/js.tree/dist/js.tree.common.lodash')
 const data = [
   { title: '标题 1', nested: { id: 10000, parentId: null } },
   { title: '标题 2', nested: { id: 20000, parentId: null } },
-  { title: '标题 1-1', nested: { id: 11000, parentId: 10000 } }
+  { title: '标题 1-1', nested: { id: 11000, parentId: 10000 } },
 ]
 
 const result = toTree(data, {
   // 详见说明：https://lodash.com/docs/#get
   idKey: 'nested.id',
-  parentKey: 'nested.parentId'
+  parentKey: 'nested.parentId',
 })
 // ->
 // [
@@ -155,7 +155,7 @@ import { toTree } from '@zhengxs/js.tree'
 const data = [
   { id: 2, parentId: null },
   { id: 3, parentId: 1 },
-  { id: 1, parentId: null }
+  { id: 1, parentId: null },
 ]
 
 // 注意这会修改原始对象
@@ -166,7 +166,7 @@ toTree(data, {
 
     // 可以进行浅拷贝，防止原始数据发生变化
     return { ...row, checked: false }
-  }
+  },
 })
 // ->
 // [
@@ -187,7 +187,7 @@ import { toTree } from '@zhengxs/js.tree'
 const data = [
   { id: 1, parentId: null },
   { id: 2, parentId: null },
-  { id: 3, parentId: 1 }
+  { id: 3, parentId: 1 },
 ]
 
 // 需要最后再处理一次的数据
@@ -205,7 +205,7 @@ const result = toTree(data, {
     }
 
     return row
-  }
+  },
 })
 
 // 处理后续数据
@@ -239,7 +239,7 @@ import { toTree } from '@zhengxs/js.tree'
 const data = [
   { id: 20000, parentId: null, sort: 1 },
   { id: 10000, parentId: null, sort: 0 },
-  { id: 30000, parentId: null, sort: 2 }
+  { id: 30000, parentId: null, sort: 2 },
 ]
 
 // 注意这会修改原始对象
@@ -257,7 +257,7 @@ toTree(data, {
     } else {
       siblings.splice(index, 0, node)
     }
-  }
+  },
 })
 // ->
 // [

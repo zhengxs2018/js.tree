@@ -7,12 +7,12 @@ describe('operators/filter.js', function () {
     const data = [
       {
         title: '财务',
-        children: [{ title: '收入流失' }, { title: '财务设置' }]
+        children: [{ title: '收入流失' }, { title: '财务设置' }],
       },
       {
         title: '站点设置',
-        children: [{ title: '菜单维护' }, { title: '角色维护' }]
-      }
+        children: [{ title: '菜单维护' }, { title: '角色维护' }],
+      },
     ]
 
     const result = map(data, (node) => {
@@ -26,12 +26,12 @@ describe('operators/filter.js', function () {
     const expected = [
       {
         title: '财务',
-        children: []
+        children: [],
       },
       {
         title: '站点设置测试',
-        children: [{ title: '菜单维护测试' }, { title: '角色维护测试' }]
-      }
+        children: [{ title: '菜单维护测试' }, { title: '角色维护测试' }],
+      },
     ]
 
     deepStrictEqual(result, expected)
@@ -41,12 +41,12 @@ describe('operators/filter.js', function () {
     const data = [
       {
         title: '财务',
-        items: [{ title: '收入流失' }, { title: '财务设置' }]
+        items: [{ title: '收入流失' }, { title: '财务设置' }],
       },
       {
         title: '站点设置',
-        items: [{ title: '菜单维护' }, { title: '角色维护' }]
-      }
+        items: [{ title: '菜单维护' }, { title: '角色维护' }],
+      },
     ]
 
     const result = map(
@@ -64,12 +64,12 @@ describe('operators/filter.js', function () {
     const expected = [
       {
         title: '财务',
-        items: []
+        items: [],
       },
       {
         title: '站点设置测试',
-        items: [{ title: '菜单维护测试' }, { title: '角色维护测试' }]
-      }
+        items: [{ title: '菜单维护测试' }, { title: '角色维护测试' }],
+      },
     ]
 
     deepStrictEqual(result, expected)

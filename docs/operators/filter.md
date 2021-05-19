@@ -16,16 +16,16 @@ const data = [
     title: '财务',
     children: [
       { title: '收入流失', children: [] },
-      { title: '财务设置', children: [] }
-    ]
+      { title: '财务设置', children: [] },
+    ],
   },
   {
     title: '站点设置',
     children: [
       { title: '收入流失', children: [] },
-      { title: '财务设置', children: [] }
-    ]
-  }
+      { title: '财务设置', children: [] },
+    ],
+  },
 ]
 
 const result = filter(data, (node, index, parents) => {
@@ -59,16 +59,16 @@ const data = [
     title: '财务',
     items: [
       { title: '收入流失', items: [] },
-      { title: '财务设置', items: [] }
-    ]
+      { title: '财务设置', items: [] },
+    ],
   },
   {
     title: '站点设置',
     items: [
       { title: '收入流失', items: [] },
-      { title: '财务设置', items: [] }
-    ]
-  }
+      { title: '财务设置', items: [] },
+    ],
+  },
 ]
 
 // 如果不是 children 属性，可以通过第三个参数指定，可选

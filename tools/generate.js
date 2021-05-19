@@ -22,11 +22,11 @@ async function makeItem(parentId, depth) {
     createdAt: Random.datetime(),
     createdBy: Random.cname(),
     updatedAt: Random.datetime(),
-    updatedBy: Random.cname()
+    updatedBy: Random.cname(),
   })
 
   writeFileSync(join(__dirname, 'benchmarks/big-data.json'), JSON.stringify(menuItem) + ',\n', {
-    flag: 'a+'
+    flag: 'a+',
   })
 
   if (depth > 0) {

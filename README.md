@@ -49,7 +49,7 @@ import { toTree } from '@zhengxs/js.tree'
 toTree([
   { id: 10000, parentId: null, title: '标题 1' },
   { id: 20000, parentId: null, title: '标题 2' },
-  { id: 11000, parentId: 10000, title: '标题 1-1' }
+  { id: 11000, parentId: 10000, title: '标题 1-1' },
 ])
 // ->
 // [
@@ -73,7 +73,7 @@ import { toTree, ROOT_ID } from '@zhengxs/js.tree'
 const data = [
   { uid: 10000, pid: null, title: '标题 1', sort: 1 },
   { uid: 20000, pid: null, title: '标题 2', sort: 2 },
-  { uid: 11000, pid: 10000, title: '标题 1-1', sort: 3 }
+  { uid: 11000, pid: 10000, title: '标题 1-1', sort: 3 },
 ]
 
 const result = toTree(data, {
@@ -108,7 +108,7 @@ const result = toTree(data, {
     // 通过浅拷贝避免修改原始数据
     // 可以在这里动态添加属性
     return { ...data, checked: false }
-  }
+  },
 })
 // ->
 // [
@@ -169,7 +169,7 @@ interface Nav extends MenuItem {
 // 如果修改了 childrenKey
 // 为了让类型提示正确，可以传入正确的类型
 toTree<Nav>(source, {
-  childrenKey: 'items'
+  childrenKey: 'items',
 })
 ```
 

@@ -100,6 +100,6 @@ export function parse<S = Node, T extends Row = Row>(
     parentKey,
     childrenKey,
     nodes,
-    childNodes
+    childNodes,
   }
 }

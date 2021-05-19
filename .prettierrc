@@ -3,6 +3,5 @@
   "singleQuote": true,
   "jsxBracketSameLine": true,
   "endOfLine": "auto",
-  "printWidth": 96,
-  "trailingComma": "none"
+  "printWidth": 96
 }

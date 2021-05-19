@@ -12,7 +12,7 @@ context('transform/toTree.js', function () {
 
     const expected = [
       { id: 1, parentId: null, children: [{ id: 3, parentId: 1, children: [] }] },
-      { id: 2, parentId: null, children: [] }
+      { id: 2, parentId: null, children: [] },
     ]
 
     expect(result).to.deep.equal(expected)
@@ -30,7 +30,7 @@ context('transform/toTree.js', function () {
 
     const expected = [
       { id: 1, parentId: 0, children: [{ id: 3, parentId: 1, children: [] }] },
-      { id: 2, parentId: 0, children: [] }
+      { id: 2, parentId: 0, children: [] },
     ]
 
     expect(result).to.deep.equal(expected)
@@ -63,7 +63,7 @@ context('transform/toTree.js', function () {
 
     const expected = [
       { sub: 1, parentId: null, children: [{ sub: 3, parentId: 1, children: [] }] },
-      { sub: 2, parentId: null, children: [] }
+      { sub: 2, parentId: null, children: [] },
     ]
 
     expect(result).to.deep.equal(expected)
@@ -81,7 +81,7 @@ context('transform/toTree.js', function () {
 
     const expected = [
       { id: 1, pid: null, children: [{ id: 3, pid: 1, children: [] }] },
-      { id: 2, pid: null, children: [] }
+      { id: 2, pid: null, children: [] },
     ]
 
     expect(result).to.deep.equal(expected)
@@ -99,7 +99,7 @@ context('transform/toTree.js', function () {
 
     const expected = [
       { id: 1, parentId: null, items: [{ id: 3, parentId: 1, items: [] }] },
-      { id: 2, parentId: null, items: [] }
+      { id: 2, parentId: null, items: [] },
     ]
 
     expect(result).to.deep.equal(expected)
@@ -126,8 +126,8 @@ context('transform/toTree.js', function () {
         id: 1,
         parentId: null,
         test: true,
-        children: [{ id: 3, parentId: 1, children: [], test: true }]
-      }
+        children: [{ id: 3, parentId: 1, children: [], test: true }],
+      },
     ]
 
     expect(result).to.deep.equal(expected)

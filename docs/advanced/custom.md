@@ -153,28 +153,28 @@ const data: Item[] = [
   {
     id: 10000,
     parentId: null,
-    title: '财务'
+    title: '财务',
   },
   {
     id: 11000,
     parentId: 10000,
-    title: '财务设置'
+    title: '财务设置',
   },
   {
     id: 20000,
     parentId: null,
-    title: '站点设置'
+    title: '站点设置',
   },
   {
     id: 21000,
     parentId: 20000,
-    title: '菜单维护'
+    title: '菜单维护',
   },
   {
     id: 22000,
     parentId: 20000,
-    title: '角色维护'
-  }
+    title: '角色维护',
+  },
 ]
 
 const tree = Tree.load<Node & Item>(data)

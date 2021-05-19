@@ -12,9 +12,9 @@ const noLodash = merge(
   {
     plugins: [
       alias({
-        entries: [{ find: 'lodash', replacement: resolve('tools/lodash.ts') }]
-      })
-    ]
+        entries: [{ find: 'lodash', replacement: resolve('tools/lodash.ts') }],
+      }),
+    ],
   },
   baseConfig
 )
@@ -23,9 +23,9 @@ const lodashES = merge(
   {
     plugins: [
       alias({
-        entries: [{ find: 'lodash', replacement: 'lodash-es' }]
-      })
-    ]
+        entries: [{ find: 'lodash', replacement: 'lodash-es' }],
+      }),
+    ],
   },
   baseConfig
 )
@@ -35,15 +35,15 @@ const tsCompile = typescript({
     compilerOptions: {
       module: 'es2015',
       declaration: false,
-      declarationMap: false
-    }
-  }
+      declarationMap: false,
+    },
+  },
 })
 
 const umdConfig = merge(noLodash, {
   output: {
     format: 'umd',
-    name: 'jsTree'
+    name: 'jsTree',
   },
   plugins: [
     typescript({
@@ -53,11 +53,11 @@ const umdConfig = merge(noLodash, {
           module: 'es2015',
           declaration: false,
           declarationMap: false,
-          removeComments: true
-        }
-      }
-    })
-  ]
+          removeComments: true,
+        },
+      },
+    }),
+  ],
 })
 
 export default [
@@ -65,62 +65,62 @@ export default [
   merge(noLodash, {
     output: {
       format: 'cjs',
-      file: resolve('./dist/js.tree.common.js')
+      file: resolve('./dist/js.tree.common.js'),
     },
-    plugins: [tsCompile]
+    plugins: [tsCompile],
   }),
   merge(baseConfig, {
     output: {
       format: 'cjs',
-      file: resolve('./dist/js.tree.common.lodash.js')
+      file: resolve('./dist/js.tree.common.lodash.js'),
     },
     plugins: [
       typescript({
         tsconfigOverride: {
           compilerOptions: {
-            module: 'es2015'
-          }
-        }
-      })
-    ]
+            module: 'es2015',
+          },
+        },
+      }),
+    ],
   }),
 
   // ES Module
   merge(noLodash, {
     output: {
       format: 'esm',
-      file: resolve('./dist/js.tree.esm.js')
+      file: resolve('./dist/js.tree.esm.js'),
     },
-    plugins: [tsCompile]
+    plugins: [tsCompile],
   }),
   merge(baseConfig, {
     output: {
       format: 'esm',
-      file: resolve('./dist/js.tree.esm.lodash.js')
+      file: resolve('./dist/js.tree.esm.lodash.js'),
     },
-    plugins: [tsCompile]
+    plugins: [tsCompile],
   }),
   merge(lodashES, {
     output: {
       format: 'esm',
-      file: resolve('./dist/js.tree.esm.lodash-es.js')
+      file: resolve('./dist/js.tree.esm.lodash-es.js'),
     },
-    plugins: [tsCompile]
+    plugins: [tsCompile],
   }),
 
   // UMD
   merge(umdConfig, {
     output: {
-      file: resolve('./dist/js.tree.js')
-    }
+      file: resolve('./dist/js.tree.js'),
+    },
   }),
   merge(umdConfig, {
     output: {
       sourcemap: true,
-      file: resolve('./dist/js.tree.min.js')
+      file: resolve('./dist/js.tree.min.js'),
     },
-    plugins: [terser()]
-  })
+    plugins: [terser()],
+  }),
 ]
 
 function resolve(filename) {

@@ -11,7 +11,7 @@ import pkg from './package.json'
 export default {
   input: resolve(__dirname, 'src/index.ts'),
   output: {
-    exports: 'named'
+    exports: 'named',
   },
   plugins: [
     externals({ deps: true }),
@@ -20,7 +20,7 @@ export default {
     replace({
       preventAssignment: true,
       __VERSION__: pkg.version,
-      NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
-    })
-  ]
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+    }),
+  ],
 }

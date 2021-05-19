@@ -9,5 +9,5 @@ module.exports = {
   coverageDirectory: 'coverage',
   coverageReporters: ['html', 'lcov', 'text'],
   testEnvironment: 'node',
-  moduleFileExtensions: ['ts', 'js', 'json']
+  moduleFileExtensions: ['ts', 'js', 'json'],
 }

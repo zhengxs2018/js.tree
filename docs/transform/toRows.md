@@ -10,16 +10,16 @@ const data = [
     title: '财务',
     children: [
       { title: '收入流失', children: [] },
-      { title: '财务设置', children: [] }
-    ]
+      { title: '财务设置', children: [] },
+    ],
   },
   {
     title: '站点设置',
     children: [
       { title: '收入流失', children: [] },
-      { title: '财务设置', children: [] }
-    ]
-  }
+      { title: '财务设置', children: [] },
+    ],
+  },
 ]
 
 toRows(data)
@@ -44,16 +44,16 @@ const data = [
     title: '财务',
     items: [
       { title: '收入流失', items: [] },
-      { title: '财务设置', children: [] }
-    ]
+      { title: '财务设置', children: [] },
+    ],
   },
   {
     title: '站点设置',
     items: [
       { title: '收入流失', items: [] },
-      { title: '财务设置', items: [] }
-    ]
-  }
+      { title: '财务设置', items: [] },
+    ],
+  },
 ]
 
 // 指定子级列表的属性
