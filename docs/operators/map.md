@@ -51,8 +51,8 @@ const result = map(data, (node, index, parents) => {
 //   {
 //     title: '站点设置测试',
 //     children: [
-//       { title: '菜单维护测试', children: [] },
-//       { title: '角色维护测试', children: [] }
+//       { title: '收入流失测试' },
+//       { title: '财务设置测试' }
 //     ]
 //   }
 // ]
@@ -107,8 +107,8 @@ const result = map(
 //   {
 //     title: '站点设置测试',
 //     items: [
-//       { title: '菜单维护测试', items: [] },
-//       { title: '角色维护测试', items: [] }
+//       { title: '收入流失测试' },
+//       { title: '财务设置测试' }
 //     ]
 //   }
 // ]

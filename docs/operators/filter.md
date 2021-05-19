@@ -42,8 +42,8 @@ const result = filter(data, (node, index, parents) => {
 //   {
 //     title: '站点设置',
 //     children: [
-//       { title: '菜单维护' },
-//       { title: '角色维护' }
+//       { title: '收入流失' },
+//       { title: '财务设置' }
 //     ]
 //   }
 // ]
@@ -84,8 +84,8 @@ const result = filter(data, ({ title }) => title.indexOf('设置') > -1, 'items'
 //   {
 //     title: '站点设置',
 //     items: [
-//       { title: '菜单维护', items: [] },
-//       { title: '角色维护', items: [] }
+//       { title: '收入流失' },
+//       { title: '财务设置' }
 //     ]
 //   }
 // ]
