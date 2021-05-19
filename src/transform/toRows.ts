@@ -1,4 +1,4 @@
-import { popKey, each } from '../common/utils'
+import { popKey } from '../common/utils'
 import { CHILDREN_KEY } from '../common/constants'
 
 import type { Row } from '../types'
@@ -19,12 +19,14 @@ export function toRows<T extends Row, U extends Row>(
 
   function callback(source: T) {
     const target = { ...source } as U
+    const children = popKey(target, childrenKey, [])
+
     result.push(target)
 
-    each(popKey(target, childrenKey, []), callback)
+    children.forEach(callback)
   }
 
-  each(data, callback)
+  data.forEach(callback)
 
   return result
 }

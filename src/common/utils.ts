@@ -84,20 +84,3 @@ export function exporter<T>(nodes: Record<ID, T[]>, root?: ID | Exporter<T>): T[
 
   return nodes[defaultTo(root, ROOT_ID)] || []
 }
-
-/**
- * 数组循环
- *
- * @param data - 数组
- * @param callback - 回调函数，返回 false 停止循环
- */
-export function each<T>(
-  data: T[],
-  callback: (value: T, index: number) => boolean | void
-): void {
-  let i = data.length
-
-  while (i--) {
-    if (callback(data[i] as T, i) === false) break
-  }
-}
