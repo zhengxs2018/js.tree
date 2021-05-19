@@ -1,7 +1,9 @@
 export type { ID, None, Row, Node, Exporter, Transform, Predicate } from './types'
 
 export { map } from './operators/map'
+export { each } from './operators/each'
 export { filter } from './operators/filter'
+export { exclude } from './operators/exclude'
 
 export { toTree } from './transform/toTree'
 export type { ToTreeOptions } from './transform/toTree'

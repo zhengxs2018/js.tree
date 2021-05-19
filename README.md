@@ -33,8 +33,10 @@
   - [toTree 行转树](./docs/transform/toTree.md)
   - [toRows 树转行](./docs/transform/toRows.md)
 - 操作
-  - [filter 过滤内容](./docs/operators/filter.md)
   - [map 修改内容](./docs/operators/map.md)
+  - [each 循环内容](./docs/operators/each.md)
+  - [filter 过滤内容](./docs/operators/filter.md)
+  - [exclude 排除内容](./docs/operators/exclude.md)
 - [二次封装](./docs/advanced/custom.md)
 
 ### 安装
