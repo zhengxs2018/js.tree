@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/zhengxs2018/js.tree/compare/v0.1.1...v0.2.0) (2021-05-19)
+
+
+### Features
+
+* 添加 each 和 exclude 函数 ([0fa8aba](https://github.com/zhengxs2018/js.tree/commit/0fa8aba25e5d12f82f30932c6e45ad13e21c7e6c))
+
+
+
 ## [0.1.1](https://github.com/zhengxs2018/js.tree/compare/v0.1.0-rc3...v0.1.1) (2021-05-05)
 
 
