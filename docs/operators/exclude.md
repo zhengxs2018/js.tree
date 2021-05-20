@@ -2,7 +2,11 @@
 
 可以使用 `exclude` 函数过滤掉不想要的数据
 
-这个方法和 `filter` 相反，回调函数返回 `true` 的数据将被过滤。
+和 `filter` 方法的区别：
+
+- 回调函数返回 `true` 的数据将被过滤
+- 如果子级都被过滤掉了，那父级也会被排除
+
 
 回调函数参数：
 
@@ -24,7 +28,7 @@ const data = [
   },
 ]
 
-const result = filter(data, (node, index, parents) => {
+const result = exclude(data, (node, index, parents) => {
   return node.title.includes('财务') || node.title.includes('角色')
 })
 // ->
@@ -39,7 +43,7 @@ const result = filter(data, (node, index, parents) => {
 默认子级列表的属性名称是 **chilren**，可以通过第三个参数修改
 
 ```js
-import { filter } from '@zhengxs/js.tree'
+import { exclude } from '@zhengxs/js.tree'
 
 const data = [
   {
@@ -53,7 +57,7 @@ const data = [
 ]
 
 // 如果不是 children 属性，可以通过第三个参数指定，可选
-const result = filter(data, ({ title }) => title.includes('财务') || title.includes('角色'), 'items')
+const result = exclude(data, ({ title }) => title.includes('财务') || title.includes('角色'), 'items')
 // ->
 // [
 //   {
