@@ -14,7 +14,9 @@
 [![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?style=flat)](#typescript)
 ![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)
 
-> `lodash` 是可选的，详见 [对不同构建版本的解释](#对不同构建版本的解释)
+[国内镜像](https://gitee.com/zhengxs2018/js.tree)
+
+---
 
 快速，轻量，无依赖的树结构数据处理函数库。
 
