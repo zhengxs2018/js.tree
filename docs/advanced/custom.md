@@ -184,18 +184,18 @@ console.log(tree.root())
 
 // 获取指定节点
 console.log(tree.get(11000)?.title === '财务设置')
+// -> true
 
 // 获取上级节点
 console.log(tree.parent(11000))
 // ->
-// [
-//   {
-//     id: 10000,
-//     parentId: null,
-//     title: '财务',
-//     children: [...]
-//   }
-// ]
+//  {
+//    id: 10000,
+//    parentId: null,
+//    title: '财务',
+//    children: [...]
+//  }
+
 
 // 获取上级，直到最顶级
 console.log(tree.parents(11000))
