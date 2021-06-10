@@ -1,22 +1,66 @@
-# @zhengxs/js.tree
-
-[![lang](https://img.shields.io/badge/lang-typescript-informational?style=flat)](https://www.typescriptlang.org/)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
-[![npm version](https://img.shields.io/npm/v/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Downloads](https://img.shields.io/npm/dt/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Downloads](https://img.shields.io/npm/dm/%40zhengxs%2Fjs.tree.svg?style=flat)](https://www.npmjs.com/package/%40zhengxs%2Fjs.tree)
-[![Gzip Size](http://img.badgesize.io/https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip&style=flat)](https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js)
-[![codecov](https://codecov.io/gh/zhengxs2018/js.tree/branch/main/graph/badge.svg?token=JBYVAK2RRG)](https://codecov.io/gh/zhengxs2018/js.tree)
-[![Dependency Status](https://david-dm.org/zhengxs2018/js.tree.SVG)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
-[![devDependency Status](https://david-dm.org/zhengxs2018/js.tree/dev-status.svg)](https://david-dm.org/zhengxs2018/js.tree?type=dev)
-[![js.tree](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/dtcor7/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/dtcor7/runs)
-[![Node.js CI](https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml/badge.svg)](https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml)
-[![typings included](https://img.shields.io/badge/typings-included-brightgreen.svg?style=flat)](#typescript)
-![License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)
-
-[国内镜像](https://gitee.com/zhengxs2018/js.tree)
+<div align="center">
+  <h1>
+   <br/>
+    <br/>
+    👍
+    <br />
+    @zhengxs/js.tree
+    <br />
+    <br />
+  </h1>
+  <sup>
+    <br />
+    <br />
+    <a href="https://www.typescriptlang.org">
+      <img src="https://img.shields.io/badge/lang-typescript-informational?style=flat" alt="TypeScript" />
+    </a>
+    <a href="https://github.com/prettier/prettier">
+      <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier" />
+    </a>
+    <a href="https://www.npmjs.com/package/@zhengxs/js.tree">
+      <img src="https://img.shields.io/npm/v/@zhengxs/js.tree.svg" alt="npm package" />
+    </a>
+    <a href="https://www.npmjs.com/package/@zhengxs/js.tree">
+      <img src="https://img.shields.io/npm/dt/@zhengxs/js.tree.svg" alt="npm downloads" />
+    </a>
+    <a href="https://www.npmjs.com/package/@zhengxs/js.tree">
+      <img src="https://img.shields.io/npm/dm/@zhengxs/js.tree.svg" alt="npm downloads" />
+    </a>
+    <a href="https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js">
+      <img src="https://img.badgesize.io/https:/unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip&style=flat" alt="Gzip Size" />
+    </a>
+    <a href="https://david-dm.org/zhengxs2018/js.tree">
+      <img src="https://img.shields.io/david/zhengxs2018/js.tree" alt="Dependency Status" />
+    </a>
+    <a href="https://david-dm.org/zhengxs2018/js.tree?type=dev">
+      <img src="https://img.shields.io/david/dev/zhengxs2018/js.tree" alt="DevDependency Status" />
+    </a>
+    <a href="https://dashboard.cypress.io/projects/dtcor7/runs">
+      <img src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/dtcor7/main&style=flat&logo=cypress" alt="Cypress" />
+    </a>
+    <a href="https://codecov.io/gh/zhengxs2018/js.tree">
+      <img src="https://codecov.io/gh/zhengxs2018/js.tree/branch/main/graph/badge.svg" alt="codecov" />
+    </a>
+    <a href="https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml">
+      <img src="https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml/badge.svg" alt="Github action" />
+    </a>
+    <a href="#typescript">
+      <img src="https://img.shields.io/badge/typings-included-brightgreen.svg?style=flat" alt="Typings" />
+    </a>
+    <a href="#License">
+      <img src="https://img.shields.io/npm/l/@zhengxs/js.tree.svg?style=flat-square" alt="License" />
+    </a>
+    <br />
+    <br />
+  </sup>
+  <div>快速，轻量，无依赖的树结构数据处理函数库。</div>
+  <br />
+  <br />
+  <br />
+</div>
 
 ---
+
 
 快速，轻量，无依赖的树结构数据处理函数库。
 
@@ -28,6 +72,10 @@
 - 内置 `filter/map` 函数
 
 ## 快速开始
+
+
+[国内镜像](https://gitee.com/zhengxs2018/js.tree)
+
 
 ### 文档
 
@@ -97,6 +145,13 @@ const result = toTree(data, {
   // 挂载子级的属性名称，默认：children
   childrenKey: 'items',
 
+  // 数据添加进 children 数组前的处理，可选
+  transform(data) {
+    // 通过浅拷贝避免修改原始数据
+    // 可以在这里动态添加属性
+    return { ...data, checked: false }
+  },
+
   // 接管插入行为
   insert(siblings, node) {
     // ps: 任意层级的数据都是这样处理的
@@ -107,13 +162,6 @@ const result = toTree(data, {
     } else {
       siblings.splice(index, 0, node)
     }
-  },
-
-  // 数据添加进 children 数组前的处理，默认：undefined
-  transform(data) {
-    // 通过浅拷贝避免修改原始数据
-    // 可以在这里动态添加属性
-    return { ...data, checked: false }
   },
 })
 // ->
@@ -146,11 +194,8 @@ const result = toTree(data, {
 // ]
 ```
 
-<br />
 
-<a href="https://npm.runkit.com/@zhengxs/js.tree">
-  <img src="https://static.runkitcdn.com/assets/images/brand/horizontal-logo-full.svg" height="44" alt="Try on RunKit">
-</a>
+[Try in runkit](https://npm.runkit.com/@zhengxs/bem)
 
 ## TypeScript
 
