@@ -55,280 +55,1124 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<div class="tsd-panel tsd-typography">
-				<div align="center">
-					<h1>
-						<br/>
-						<br/>
-						👍
-						<br />
-						@zhengxs/js.tree
-						<br />
-						<br />
-					</h1>
-					<sup>
-						<br />
-						<br />
-						<a href="https://www.typescriptlang.org">
-							<img src="https://img.shields.io/badge/lang-typescript-informational?style=flat" alt="TypeScript" />
-						</a>
-						<a href="https://github.com/prettier/prettier">
-							<img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="code style: prettier" />
-						</a>
-						<a href="https://www.npmjs.com/package/@zhengxs/js.tree">
-							<img src="https://img.shields.io/npm/v/@zhengxs/js.tree.svg" alt="npm package" />
-						</a>
-						<a href="https://www.npmjs.com/package/@zhengxs/js.tree">
-							<img src="https://img.shields.io/npm/dt/@zhengxs/js.tree.svg" alt="npm downloads" />
-						</a>
-						<a href="https://www.npmjs.com/package/@zhengxs/js.tree">
-							<img src="https://img.shields.io/npm/dm/@zhengxs/js.tree.svg" alt="npm downloads" />
-						</a>
-						<a href="https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js">
-							<img src="https://img.badgesize.io/https:/unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip&style=flat" alt="Gzip Size" />
-						</a>
-						<a href="https://david-dm.org/zhengxs2018/js.tree">
-							<img src="https://img.shields.io/david/zhengxs2018/js.tree" alt="Dependency Status" />
-						</a>
-						<a href="https://david-dm.org/zhengxs2018/js.tree?type=dev">
-							<img src="https://img.shields.io/david/dev/zhengxs2018/js.tree" alt="DevDependency Status" />
-						</a>
-						<a href="https://dashboard.cypress.io/projects/dtcor7/runs">
-							<img src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/dtcor7/main&style=flat&logo=cypress" alt="Cypress" />
-						</a>
-						<a href="https://codecov.io/gh/zhengxs2018/js.tree">
-							<img src="https://codecov.io/gh/zhengxs2018/js.tree/branch/main/graph/badge.svg" alt="codecov" />
-						</a>
-						<a href="https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml">
-							<img src="https://github.com/zhengxs2018/js.tree/actions/workflows/tests.yaml/badge.svg" alt="Github action" />
-						</a>
-						<a href="#typescript">
-							<img src="https://img.shields.io/badge/typings-included-brightgreen.svg?style=flat" alt="Typings" />
-						</a>
-						<a href="#License">
-							<img src="https://img.shields.io/npm/l/@zhengxs/js.tree.svg?style=flat-square" alt="License" />
-						</a>
-						<br />
-						<br />
-					</sup>
-					<div>快速，轻量，无依赖的树结构数据处理函数库。</div>
-					<br />
-					<br />
-					<br />
-				</div>
-				<hr>
-				<ul>
-					<li>一个循环解决行转树的问题</li>
-					<li>转树除了添加 <code>children</code> 属性，不会修改任何数据</li>
-					<li>支持任意关系字段，如：非 id，parentId, children 字段支持</li>
-					<li>支持接管插入行为，如：自定义插入顺序</li>
-					<li>支持动态导出树节点</li>
-					<li>内置 <code>filter/map</code> 函数</li>
-				</ul>
-				<a href="#快速开始" id="快速开始" style="color: inherit; text-decoration: none;">
-					<h2>快速开始</h2>
-				</a>
-				<p><a href="https://gitee.com/zhengxs2018/js.tree">国内镜像</a></p>
-				<a href="#文档" id="文档" style="color: inherit; text-decoration: none;">
-					<h3>文档</h3>
-				</a>
-				<ul>
-					<li>转换<ul>
-							<li><a href="./docs/transform/toTree.md">toTree 行转树</a></li>
-							<li><a href="./docs/transform/toRows.md">toRows 树转行</a></li>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface"><a href="interfaces/node.html" class="tsd-kind-icon">Node</a></li>
+								<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/totreeoptions.html" class="tsd-kind-icon">To<wbr>Tree<wbr>Options</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="index.html#exporter" class="tsd-kind-icon">Exporter</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#id" class="tsd-kind-icon">ID</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#none" class="tsd-kind-icon">None</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="index.html#parseoptions" class="tsd-kind-icon">Parse<wbr>Options</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="index.html#parseresult" class="tsd-kind-icon">Parse<wbr>Result</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="index.html#predicate" class="tsd-kind-icon">Predicate</a></li>
+								<li class="tsd-kind-type-alias"><a href="index.html#row" class="tsd-kind-icon">Row</a></li>
+								<li class="tsd-kind-type-alias tsd-has-type-parameter"><a href="index.html#transform" class="tsd-kind-icon">Transform</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="index.html#children_key" class="tsd-kind-icon">CHILDREN_<wbr>KEY</a></li>
+								<li class="tsd-kind-variable"><a href="index.html#id_key" class="tsd-kind-icon">ID_<wbr>KEY</a></li>
+								<li class="tsd-kind-variable"><a href="index.html#parent_id_key" class="tsd-kind-icon">PARENT_<wbr>ID_<wbr>KEY</a></li>
+								<li class="tsd-kind-variable"><a href="index.html#root_id" class="tsd-kind-icon">ROOT_<wbr>ID</a></li>
+								<li class="tsd-kind-variable"><a href="index.html#version" class="tsd-kind-icon">version</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#each" class="tsd-kind-icon">each</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#exclude" class="tsd-kind-icon">exclude</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#exporter" class="tsd-kind-icon">exporter</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#filter" class="tsd-kind-icon">filter</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#map" class="tsd-kind-icon">map</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#parse" class="tsd-kind-icon">parse</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#torows" class="tsd-kind-icon">to<wbr>Rows</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#totree" class="tsd-kind-icon">to<wbr>Tree</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="exporter" class="tsd-anchor"></a>
+					<h3>Exporter</h3>
+					<div class="tsd-signature tsd-kind-icon">Exporter&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>nodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span>, result<span class="tsd-signature-symbol">: </span><a href="index.html#parseresult" class="tsd-signature-type" data-tsd-kind="Type alias">ParseResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L40">types.ts:40</a></li>
 						</ul>
-					</li>
-					<li>操作<ul>
-							<li><a href="./docs/operators/map.md">map 修改内容</a></li>
-							<li><a href="./docs/operators/each.md">each 循环内容</a></li>
-							<li><a href="./docs/operators/filter.md">filter 过滤内容</a></li>
-							<li><a href="./docs/operators/exclude.md">exclude 排除内容</a></li>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>数据导出</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>nodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span>, result<span class="tsd-signature-symbol">: </span><a href="index.html#parseresult" class="tsd-signature-type" data-tsd-kind="Type alias">ParseResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>nodes: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											</li>
+											<li>
+												<h5>result: <a href="index.html#parseresult" class="tsd-signature-type" data-tsd-kind="Type alias">ParseResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+									</li>
+								</ul>
+							</li>
 						</ul>
-					</li>
-					<li><a href="./docs/advanced/custom.md">二次封装</a></li>
-				</ul>
-				<a href="#安装" id="安装" style="color: inherit; text-decoration: none;">
-					<h3>安装</h3>
-				</a>
-				<pre><code class="language-shell"><span style="color: #000000">$ npm i @zhengxs/js.tree --save</span>
-</code></pre>
-				<a href="#使用" id="使用" style="color: inherit; text-decoration: none;">
-					<h3>使用</h3>
-				</a>
-				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">toTree</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@zhengxs/js.tree&#039;</span>
-
-<span style="color: #795E26">toTree</span><span style="color: #000000">([</span>
-<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">10000</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;标题 1&#039;</span><span style="color: #000000"> },</span>
-<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">20000</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;标题 2&#039;</span><span style="color: #000000"> },</span>
-<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">11000</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">10000</span><span style="color: #000000">, </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;标题 1-1&#039;</span><span style="color: #000000"> },</span>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>ID</h3>
+					<div class="tsd-signature tsd-kind-icon">ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L8">types.ts:8</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>ID类型</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="none" class="tsd-anchor"></a>
+					<h3>None</h3>
+					<div class="tsd-signature tsd-kind-icon">None<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L15">types.ts:15</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>空数据</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="parseoptions" class="tsd-anchor"></a>
+					<h3>Parse<wbr>Options</h3>
+					<div class="tsd-signature tsd-kind-icon">Parse<wbr>Options&lt;T, S&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>childrenKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>idKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>insert<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>siblings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span>, node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>parentKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>transform<span class="tsd-signature-symbol">?: </span><a href="index.html#transform" class="tsd-signature-type" data-tsd-kind="Type alias">Transform</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/parse.ts#L9">common/parse.ts:9</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+						<li>
+							<h4>S</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> children<wbr>Key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>支持自定义 children 的属性名</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> id<wbr>Key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>id 的属性名</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> insert<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>siblings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span>, node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>允许外部接管插入行为</p>
+									</div>
+								</div>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-literal">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>siblings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span>, node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>siblings: <span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span></h5>
+													</li>
+													<li>
+														<h5>node: <span class="tsd-signature-type">S</span></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> parent<wbr>Key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>parentId 的属性名</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5><span class="tsd-flag ts-flagOptional">Optional</span> transform<span class="tsd-signature-symbol">?: </span><a href="index.html#transform" class="tsd-signature-type" data-tsd-kind="Type alias">Transform</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>允许外部转换数据</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="parseresult" class="tsd-anchor"></a>
+					<h3>Parse<wbr>Result</h3>
+					<div class="tsd-signature tsd-kind-icon">Parse<wbr>Result&lt;S&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>childNodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>childrenKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>idKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>nodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>parentKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/parse.ts#L23">common/parse.ts:23</a></li>
+						</ul>
+					</aside>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>S</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter">
+								<h5>child<wbr>Nodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>包含所有节点关系的对象</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>children<wbr>Key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>支持自定义 children 的属性名</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>id<wbr>Key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>id 的属性名</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>nodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>包含所有节点的对象</p>
+									</div>
+								</div>
+							</li>
+							<li class="tsd-parameter">
+								<h5>parent<wbr>Key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>parentId 的属性名</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="predicate" class="tsd-anchor"></a>
+					<h3>Predicate</h3>
+					<div class="tsd-signature tsd-kind-icon">Predicate&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L47">types.ts:47</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>filter 回调</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>data: <span class="tsd-signature-type">T</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="row" class="tsd-anchor"></a>
+					<h3>Row</h3>
+					<div class="tsd-signature tsd-kind-icon">Row<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L22">types.ts:22</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>普通对象</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-has-type-parameter">
+					<a name="transform" class="tsd-anchor"></a>
+					<h3>Transform</h3>
+					<div class="tsd-signature tsd-kind-icon">Transform&lt;T, S&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol"> | </span><a href="index.html#none" class="tsd-signature-type" data-tsd-kind="Type alias">None</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L54">types.ts:54</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>节点转换</p>
+						</div>
+					</div>
+					<h4 class="tsd-type-parameters-title">Type parameters</h4>
+					<ul class="tsd-type-parameters">
+						<li>
+							<h4>T</h4>
+						</li>
+						<li>
+							<h4>S</h4>
+						</li>
+					</ul>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol"> | </span><a href="index.html#none" class="tsd-signature-type" data-tsd-kind="Type alias">None</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>data: <span class="tsd-signature-type">T</span></h5>
+											</li>
+											<li>
+												<h5>index: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">S</span><span class="tsd-signature-symbol"> | </span><a href="index.html#none" class="tsd-signature-type" data-tsd-kind="Type alias">None</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="children_key" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> CHILDREN_<wbr>KEY</h3>
+					<div class="tsd-signature tsd-kind-icon">CHILDREN_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;children&quot;</span><span class="tsd-signature-symbol"> = &#x27;children&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/constants.ts#L27">common/constants.ts:27</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>子级的属性名</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="id_key" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> ID_<wbr>KEY</h3>
+					<div class="tsd-signature tsd-kind-icon">ID_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol"> = &#x27;id&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/constants.ts#L13">common/constants.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>id 的属性名</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="parent_id_key" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> PARENT_<wbr>ID_<wbr>KEY</h3>
+					<div class="tsd-signature tsd-kind-icon">PARENT_<wbr>ID_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;parentId&quot;</span><span class="tsd-signature-symbol"> = &#x27;parentId&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/constants.ts#L20">common/constants.ts:20</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>parentId 的属性名</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="root_id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> ROOT_<wbr>ID</h3>
+					<div class="tsd-signature tsd-kind-icon">ROOT_<wbr>ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;__root__&quot;</span><span class="tsd-signature-symbol"> = &#x27;__root__&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/constants.ts#L6">common/constants.ts:6</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>根ID</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="version" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> version</h3>
+					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;__VERSION__&quot;</span><span class="tsd-signature-symbol"> = &#x27;__VERSION__&#x27;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/index.ts#L24">index.ts:24</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>发布版本</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="each" class="tsd-anchor"></a>
+					<h3>each</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">each&lt;T&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span>, childrenKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/operators/each.ts#L16">operators/each.ts:16</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>遍历所有节点</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>数结构数据</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>处理回调，返回 true 将跳过子级的遍历操作</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>data: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+														<li>
+															<h5>parents: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>childrenKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>自定义子节点属性名称</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="exclude" class="tsd-anchor"></a>
+					<h3>exclude</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">exclude&lt;T&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span>, childrenKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/operators/exclude.ts#L16">operators/exclude.ts:16</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>排除某些数据</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>数结构数据</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>处理回调，返回 true 的数据将被过滤掉</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>data: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+														<li>
+															<h5>parents: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>childrenKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>自定义子节点属性名称</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="exporter" class="tsd-anchor"></a>
+					<h3>exporter</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">exporter&lt;T&gt;<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><a href="index.html#parseresult" class="tsd-signature-type" data-tsd-kind="Type alias">ParseResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span>, root<span class="tsd-signature-symbol">?: </span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol"> | </span><a href="index.html#exporter" class="tsd-signature-type" data-tsd-kind="Type alias">Exporter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/utils.ts#L81">common/utils.ts:81</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>数据导出，允许外部自定义根节点</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T</h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>result: <a href="index.html#parseresult" class="tsd-signature-type" data-tsd-kind="Type alias">ParseResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> root: <a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol"> | </span><a href="index.html#exporter" class="tsd-signature-type" data-tsd-kind="Type alias">Exporter</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>根节点，支持自定义函数</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="filter" class="tsd-anchor"></a>
+					<h3>filter</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">filter&lt;T&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span>, childrenKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/operators/filter.ts#L16">operators/filter.ts:16</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>类数组的 filter 方法</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>数结构数据</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>处理回调，注意：如果返回的对象子级不存在将不进行递归操作</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>data: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+														<li>
+															<h5>parents: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>childrenKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>自定义子节点属性名称</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="map" class="tsd-anchor"></a>
+					<h3>map</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">map&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">U</span>, childrenKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/operators/map.ts#L16">operators/map.ts:16</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>类数组的 map 方法</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+								<li>
+									<h4>U<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>数结构数据</p>
+									</div>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">U</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>处理回调，注意：如果返回的对象子级不存在将不进行递归操作</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, parents<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>data: <span class="tsd-signature-type">T</span></h5>
+														</li>
+														<li>
+															<h5>index: <span class="tsd-signature-type">number</span></h5>
+														</li>
+														<li>
+															<h5>parents: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>childrenKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>自定义子节点属性名称</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="parse" class="tsd-anchor"></a>
+					<h3>parse</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">parse&lt;S, T&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><a href="index.html#parseoptions" class="tsd-signature-type" data-tsd-kind="Type alias">ParseOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.html#parseresult" class="tsd-signature-type" data-tsd-kind="Type alias">ParseResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/parse.ts#L46">common/parse.ts:46</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>方便外部二次封装</p>
+								</div>
+								<p>如：封装一个类 jQuery 的 API 工具，方便查找节点</p>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>S = <a href="interfaces/node.html" class="tsd-signature-type" data-tsd-kind="Interface">Node</a></h4>
+								</li>
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a> = <a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>行数据</p>
+									</div>
+								</li>
+								<li>
+									<h5>options: <a href="index.html#parseoptions" class="tsd-signature-type" data-tsd-kind="Type alias">ParseOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>配置项</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="index.html#parseresult" class="tsd-signature-type" data-tsd-kind="Type alias">ParseResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="torows" class="tsd-anchor"></a>
+					<h3>to<wbr>Rows</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Rows&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, childrenKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/transform/toRows.ts#L14">transform/toRows.ts:14</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>树转行</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+								<li>
+									<h4>U<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>树结构数据</p>
+									</div>
+								</li>
+								<li>
+									<h5>childrenKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>children 属性名</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="totree" class="tsd-anchor"></a>
+					<h3>to<wbr>Tree</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">to<wbr>Tree&lt;S, T&gt;<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><a href="interfaces/totreeoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ToTreeOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/transform/toTree.ts#L207">transform/toTree.ts:207</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>行转树</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>example</dt>
+									<dd><caption>默认</caption>
+										<pre><code class="language-js"><span style="color: #795E26">toTree</span><span style="color: #000000">([</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
 <span style="color: #000000">])</span>
 <span style="color: #008000">// -&gt;</span>
-<span style="color: #008000">// [</span>
-<span style="color: #008000">//   {</span>
-<span style="color: #008000">//     id: 10000,</span>
-<span style="color: #008000">//     parentId: null,</span>
-<span style="color: #008000">//     title: &#039;标题 1&#039;,</span>
-<span style="color: #008000">//     children: [</span>
-<span style="color: #008000">//       { id: 11000, parentId: 10000, title: &#039;标题 1-1&#039;, children: [] }</span>
-<span style="color: #008000">//     ]</span>
-<span style="color: #008000">//   },</span>
-<span style="color: #008000">//   { id: 20000, parentId: null, title: &#039;标题 2&#039;, children: [] },</span>
-<span style="color: #008000">// ]</span>
-</code></pre>
-				<p>支持任意关系字段的数据</p>
-				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">toTree</span><span style="color: #000000">, </span><span style="color: #001080">ROOT_ID</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@zhengxs/js.tree&#039;</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">data</span><span style="color: #000000"> = [</span>
-<span style="color: #000000">  { </span><span style="color: #001080">uid:</span><span style="color: #000000"> </span><span style="color: #098658">10000</span><span style="color: #000000">, </span><span style="color: #001080">pid:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;标题 1&#039;</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
-<span style="color: #000000">  { </span><span style="color: #001080">uid:</span><span style="color: #000000"> </span><span style="color: #098658">20000</span><span style="color: #000000">, </span><span style="color: #001080">pid:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;标题 2&#039;</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000"> },</span>
-<span style="color: #000000">  { </span><span style="color: #001080">uid:</span><span style="color: #000000"> </span><span style="color: #098658">11000</span><span style="color: #000000">, </span><span style="color: #001080">pid:</span><span style="color: #000000"> </span><span style="color: #098658">10000</span><span style="color: #000000">, </span><span style="color: #001080">title:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;标题 1-1&#039;</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000"> },</span>
+<span style="color: #000000">[</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">children:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">      { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] }</span>
+<span style="color: #000000">    ]</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
 <span style="color: #000000">]</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">result</span><span style="color: #000000"> = </span><span style="color: #795E26">toTree</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">, {</span>
-<span style="color: #000000">  </span><span style="color: #008000">// 如果 parentId 为 null 或 undefined 会合并一起</span>
-<span style="color: #000000">  </span><span style="color: #008000">// 使用 ROOT_ID 作为 key 保存</span>
-<span style="color: #000000">  </span><span style="color: #008000">// 支持函数，动态返回</span>
-<span style="color: #000000">  </span><span style="color: #001080">root:</span><span style="color: #000000"> </span><span style="color: #0070C1">ROOT_ID</span><span style="color: #000000">,</span>
-
-<span style="color: #000000">  </span><span style="color: #008000">// lodash 版本，支持 path, 如: nested.id</span>
-<span style="color: #000000">  </span><span style="color: #001080">idKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;uid&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// 可选，默认: id</span>
-
-<span style="color: #000000">  </span><span style="color: #008000">// lodash 版本，支持 path, 如: nested.parentId</span>
-<span style="color: #000000">  </span><span style="color: #001080">parentKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;pid&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// 可选，默认：parentId</span>
-
-<span style="color: #000000">  </span><span style="color: #008000">// 挂载子级的属性名称，默认：children</span>
-<span style="color: #000000">  </span><span style="color: #001080">childrenKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;items&#039;</span><span style="color: #000000">,</span>
-
-<span style="color: #000000">  </span><span style="color: #008000">// 数据添加进 children 数组前的处理，可选</span>
-<span style="color: #000000">  </span><span style="color: #795E26">transform</span><span style="color: #000000">(</span><span style="color: #001080">data</span><span style="color: #000000">) {</span>
-<span style="color: #000000">    </span><span style="color: #008000">// 通过浅拷贝避免修改原始数据</span>
-<span style="color: #000000">    </span><span style="color: #008000">// 可以在这里动态添加属性</span>
-<span style="color: #000000">    </span><span style="color: #AF00DB">return</span><span style="color: #000000"> { ...</span><span style="color: #001080">data</span><span style="color: #000000">, </span><span style="color: #001080">checked:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000"> }</span>
-<span style="color: #000000">  },</span>
-
-<span style="color: #000000">  </span><span style="color: #008000">// 接管插入行为</span>
-<span style="color: #000000">  </span><span style="color: #795E26">insert</span><span style="color: #000000">(</span><span style="color: #001080">siblings</span><span style="color: #000000">, </span><span style="color: #001080">node</span><span style="color: #000000">) {</span>
-<span style="color: #000000">    </span><span style="color: #008000">// ps: 任意层级的数据都是这样处理的</span>
-<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">index</span><span style="color: #000000"> = </span><span style="color: #001080">siblings</span><span style="color: #000000">.</span><span style="color: #795E26">findIndex</span><span style="color: #000000">((</span><span style="color: #001080">n</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">n</span><span style="color: #000000">.</span><span style="color: #001080">sort</span><span style="color: #000000"> &gt; </span><span style="color: #001080">node</span><span style="color: #000000">.</span><span style="color: #001080">sort</span><span style="color: #000000">)</span>
-
-<span style="color: #000000">    </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">index</span><span style="color: #000000"> === -</span><span style="color: #098658">1</span><span style="color: #000000">) {</span>
-<span style="color: #000000">      </span><span style="color: #001080">siblings</span><span style="color: #000000">.</span><span style="color: #795E26">push</span><span style="color: #000000">(</span><span style="color: #001080">node</span><span style="color: #000000">)</span>
-<span style="color: #000000">    } </span><span style="color: #AF00DB">else</span><span style="color: #000000"> {</span>
-<span style="color: #000000">      </span><span style="color: #001080">siblings</span><span style="color: #000000">.</span><span style="color: #795E26">splice</span><span style="color: #000000">(</span><span style="color: #001080">index</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">node</span><span style="color: #000000">)</span>
-<span style="color: #000000">    }</span>
-<span style="color: #000000">  },</span>
-<span style="color: #000000">})</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><caption>自定义 id/parentId 属性</caption>
+										<pre><code class="language-js"><span style="color: #795E26">toTree</span><span style="color: #000000">(</span>
+<span style="color: #000000">  [</span>
+<span style="color: #000000">    { </span><span style="color: #001080">sub:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parent:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">sub:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parent:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">sub:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parent:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  ],</span>
+<span style="color: #000000">  { </span><span style="color: #001080">idKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;sub&#039;</span><span style="color: #000000">, </span><span style="color: #001080">parentKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;parent&#039;</span><span style="color: #000000"> }</span>
+<span style="color: #000000">)</span>
 <span style="color: #008000">// -&gt;</span>
-<span style="color: #008000">// [</span>
-<span style="color: #008000">//   {</span>
-<span style="color: #008000">//     uid: 10000,</span>
-<span style="color: #008000">//     pid: null,</span>
-<span style="color: #008000">//     title: &#039;标题 1&#039;,</span>
-<span style="color: #008000">//     sort: 1,</span>
-<span style="color: #008000">//     checked: false,</span>
-<span style="color: #008000">//     items: [</span>
-<span style="color: #008000">//       {</span>
-<span style="color: #008000">//         uid: 11000,</span>
-<span style="color: #008000">//         pid: 10000,</span>
-<span style="color: #008000">//         title: &#039;标题 1-1&#039;,</span>
-<span style="color: #008000">//         sort: 3,</span>
-<span style="color: #008000">//         checked: false,</span>
-<span style="color: #008000">//         items: []</span>
-<span style="color: #008000">//       }</span>
-<span style="color: #008000">//     ]</span>
-<span style="color: #008000">//   },</span>
-<span style="color: #008000">//   {</span>
-<span style="color: #008000">//     uid: 20000,</span>
-<span style="color: #008000">//     pid: null,</span>
-<span style="color: #008000">//     title: &#039;标题 2&#039;,</span>
-<span style="color: #008000">//     sort: 2,</span>
-<span style="color: #008000">//     checked: false,</span>
-<span style="color: #008000">//     items: []</span>
-<span style="color: #008000">//   }</span>
-<span style="color: #008000">// ]</span>
+<span style="color: #000000">[</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">sub:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">parent:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">items:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">      { </span><span style="color: #001080">sub:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parent:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">items:</span><span style="color: #000000"> [] }</span>
+<span style="color: #000000">    ]</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">sub:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parent:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">items:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">]</span>
 </code></pre>
-				<p><a href="https://npm.runkit.com/@zhengxs/bem">Try in runkit</a></p>
-				<a href="#typescript" id="typescript" style="color: inherit; text-decoration: none;">
-					<h2>TypeScript</h2>
-				</a>
-				<p>内置 ts 类型</p>
-				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">toTree</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@zhengxs/js.tree&#039;</span>
-
-<span style="color: #008000">// 转换前的数据</span>
-<span style="color: #0000FF">type</span><span style="color: #000000"> </span><span style="color: #267F99">MenuItem</span><span style="color: #000000"> = {</span>
-<span style="color: #000000">  </span><span style="color: #001080">id</span><span style="color: #000000">: </span><span style="color: #267F99">string</span>
-<span style="color: #000000">  </span><span style="color: #001080">parentId</span><span style="color: #000000">: </span><span style="color: #267F99">string</span>
-<span style="color: #000000">  </span><span style="color: #001080">text</span><span style="color: #000000">: </span><span style="color: #267F99">string</span>
-<span style="color: #000000">  </span><span style="color: #001080">url</span><span style="color: #000000">?: </span><span style="color: #267F99">string</span>
-<span style="color: #000000">}</span>
-
-<span style="color: #008000">// 转换后的数据</span>
-<span style="color: #0000FF">interface</span><span style="color: #000000"> </span><span style="color: #267F99">Nav</span><span style="color: #000000"> </span><span style="color: #0000FF">extends</span><span style="color: #000000"> </span><span style="color: #267F99">MenuItem</span><span style="color: #000000"> {</span>
-<span style="color: #000000">  </span><span style="color: #001080">items</span><span style="color: #000000">: </span><span style="color: #267F99">Nav</span><span style="color: #000000">[]</span>
-<span style="color: #000000">}</span>
-
-<span style="color: #008000">// 如果修改了 childrenKey</span>
-<span style="color: #008000">// 为了让类型提示正确，可以传入正确的类型</span>
-<span style="color: #795E26">toTree</span><span style="color: #000000">&lt;</span><span style="color: #267F99">Nav</span><span style="color: #000000">&gt;(</span><span style="color: #001080">source</span><span style="color: #000000">, {</span>
-<span style="color: #000000">  </span><span style="color: #001080">childrenKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;items&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">})</span>
+									</dd>
+									<dt>example</dt>
+									<dd><caption>自定义 children 属性</caption>
+										<pre><code class="language-js"><span style="color: #795E26">toTree</span><span style="color: #000000">(</span>
+<span style="color: #000000">  [</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  ],</span>
+<span style="color: #000000">  { </span><span style="color: #001080">children:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;items&#039;</span><span style="color: #000000"> }</span>
+<span style="color: #000000">)</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #000000">[</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">items:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">      { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">items:</span><span style="color: #000000"> [] }</span>
+<span style="color: #000000">    ]</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">items:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">]</span>
 </code></pre>
-				<a href="#对不同构建版本的解释" id="对不同构建版本的解释" style="color: inherit; text-decoration: none;">
-					<h2>对不同构建版本的解释</h2>
-				</a>
-				<blockquote>
-					<p>umd 模块使用 <code>es5</code>，其他版本使用的是 <code>es2015</code>。</p>
-				</blockquote>
-				<p>在包的 dist/ 目录你将会找到很多不同的构建版本，这里列出了它们之间的差别：</p>
-				<table>
-					<thead>
-						<tr>
-							<th></th>
-							<th>UMD</th>
-							<th>CommonJS</th>
-							<th>ES Module</th>
-						</tr>
-					</thead>
-					<tbody><tr>
-							<td>无依赖</td>
-							<td>js.tree.js</td>
-							<td>js.tree.common.js</td>
-							<td>js.tree.esm.js</td>
-						</tr>
-						<tr>
-							<td>无依赖(生产环境)</td>
-							<td>js.tree.min.js</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td>包含 lodash 模块</td>
-							<td></td>
-							<td>js.tree.common.lodash.js</td>
-							<td>js.tree.esm.lodash.js</td>
-						</tr>
-						<tr>
-							<td>包含 lodash-es 模块</td>
-							<td></td>
-							<td></td>
-							<td>js.tree.esm.lodash-es.js</td>
-						</tr>
-				</tbody></table>
-				<p>除环境导致的，为了减少包体积，和项目共享 <code>lodash</code> 模块。</p>
-				<p>但不是所有项目都会引入，为了避免这种情况，默认的都是不带的。</p>
-				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
-					<h2>License</h2>
-				</a>
-				<ul>
-					<li>MIT</li>
-				</ul>
-			</div>
+									</dd>
+									<dt>example</dt>
+									<dd><caption>自定义根节点</caption>
+										<pre><code class="language-js"><span style="color: #795E26">toTree</span><span style="color: #000000">(</span>
+<span style="color: #000000">  [</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  ],</span>
+<span style="color: #000000">  { </span><span style="color: #001080">root:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000"> }</span>
+<span style="color: #000000">)</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #000000">[</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">children:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">      { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] }</span>
+<span style="color: #000000">    ]</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">]</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><caption>自定义函数导出</caption>
+										<pre><code class="language-js"><span style="color: #795E26">toTree</span><span style="color: #000000">(</span>
+<span style="color: #000000">  [</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  ],</span>
+<span style="color: #000000">  { </span><span style="color: #795E26">root</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #001080">nodes</span><span style="color: #000000"> </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">nodes</span><span style="color: #000000">[</span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000">] }</span>
+<span style="color: #000000">)</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #000000">[</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">children:</span><span style="color: #000000"> [</span>
+<span style="color: #000000">      { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] }</span>
+<span style="color: #000000">    ]</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;__root__&#039;</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">]</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><caption>数据转换</caption>
+										<pre><code class="language-js"><span style="color: #795E26">toTree</span><span style="color: #000000">(</span>
+<span style="color: #000000">  [</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  ],</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #795E26">transform</span><span style="color: #000000">(</span><span style="color: #001080">row</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #008000">// 返回 null 或 undefined 的数据不回保留</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">row</span><span style="color: #000000">.</span><span style="color: #001080">id</span><span style="color: #000000"> === </span><span style="color: #098658">3</span><span style="color: #000000">) </span><span style="color: #AF00DB">return</span>
+<span style="color: #000000">      </span><span style="color: #008000">// 可以进行浅拷贝后修改，防止破坏原始对象</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> { ...</span><span style="color: #001080">row</span><span style="color: #000000">, </span><span style="color: #001080">test:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000"> }</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">)</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #000000">[</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">test:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">test:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">]</span>
+</code></pre>
+									</dd>
+									<dt>example</dt>
+									<dd><caption>自定义插入顺序</caption>
+										<pre><code class="language-js"><span style="color: #795E26">toTree</span><span style="color: #000000">(</span>
+<span style="color: #000000">  [</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000"> },</span>
+<span style="color: #000000">    { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> },</span>
+<span style="color: #000000">  ],</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #795E26">insert</span><span style="color: #000000">(</span><span style="color: #001080">siblings</span><span style="color: #000000">, </span><span style="color: #001080">node</span><span style="color: #000000">) {</span>
+<span style="color: #000000">      </span><span style="color: #008000">// ps: 任意层级的数据都是这样处理的</span>
+<span style="color: #000000">      </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">index</span><span style="color: #000000"> = </span><span style="color: #001080">siblings</span><span style="color: #000000">.</span><span style="color: #795E26">findIndex</span><span style="color: #000000">((</span><span style="color: #001080">n</span><span style="color: #000000">) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> </span><span style="color: #001080">n</span><span style="color: #000000">.</span><span style="color: #001080">sort</span><span style="color: #000000"> &gt; </span><span style="color: #001080">node</span><span style="color: #000000">.</span><span style="color: #001080">sort</span><span style="color: #000000">)</span>
+
+<span style="color: #000000">      </span><span style="color: #008000">// 根据位置选择插入到兄弟节点当中</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">if</span><span style="color: #000000"> (</span><span style="color: #001080">index</span><span style="color: #000000"> === -</span><span style="color: #098658">1</span><span style="color: #000000">) {</span>
+<span style="color: #000000">        </span><span style="color: #001080">siblings</span><span style="color: #000000">.</span><span style="color: #795E26">push</span><span style="color: #000000">(</span><span style="color: #001080">node</span><span style="color: #000000">)</span>
+<span style="color: #000000">      } </span><span style="color: #AF00DB">else</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">siblings</span><span style="color: #000000">.</span><span style="color: #795E26">splice</span><span style="color: #000000">(</span><span style="color: #001080">index</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">node</span><span style="color: #000000">)</span>
+<span style="color: #000000">      }</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">)</span>
+<span style="color: #008000">// -&gt;</span>
+<span style="color: #000000">[</span>
+<span style="color: #000000">  {</span>
+<span style="color: #000000">    </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">1</span>
+<span style="color: #000000">    </span><span style="color: #001080">children</span><span style="color: #000000">: [</span>
+<span style="color: #000000">      { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">4</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">      { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">5</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">    ]</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">  { </span><span style="color: #001080">id:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">parentId:</span><span style="color: #000000"> </span><span style="color: #0000FF">null</span><span style="color: #000000">, </span><span style="color: #001080">sort:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">children:</span><span style="color: #000000"> [] },</span>
+<span style="color: #000000">]</span>
+</code></pre>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>S = <a href="interfaces/node.html" class="tsd-signature-type" data-tsd-kind="Interface">Node</a></h4>
+								</li>
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a> = <a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>行数据</p>
+									</div>
+								</li>
+								<li>
+									<h5>options: <a href="interfaces/totreeoptions.html" class="tsd-signature-type" data-tsd-kind="Interface">ToTreeOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>配置项</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class=" ">
-						<a href="modules.html">Exports</a>
+					<li class="current ">
+						<a href="index.html">Exports</a>
 					</li>
 				</ul>
 			</nav>
@@ -341,67 +1185,67 @@
 						<a href="interfaces/totreeoptions.html" class="tsd-kind-icon">To<wbr>Tree<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="modules.html#exporter" class="tsd-kind-icon">Exporter</a>
+						<a href="index.html#exporter" class="tsd-kind-icon">Exporter</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="modules.html#id" class="tsd-kind-icon">ID</a>
+						<a href="index.html#id" class="tsd-kind-icon">ID</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="modules.html#none" class="tsd-kind-icon">None</a>
+						<a href="index.html#none" class="tsd-kind-icon">None</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="modules.html#parseoptions" class="tsd-kind-icon">Parse<wbr>Options</a>
+						<a href="index.html#parseoptions" class="tsd-kind-icon">Parse<wbr>Options</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="modules.html#parseresult" class="tsd-kind-icon">Parse<wbr>Result</a>
+						<a href="index.html#parseresult" class="tsd-kind-icon">Parse<wbr>Result</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="modules.html#predicate" class="tsd-kind-icon">Predicate</a>
+						<a href="index.html#predicate" class="tsd-kind-icon">Predicate</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="modules.html#row" class="tsd-kind-icon">Row</a>
+						<a href="index.html#row" class="tsd-kind-icon">Row</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
-						<a href="modules.html#transform" class="tsd-kind-icon">Transform</a>
+						<a href="index.html#transform" class="tsd-kind-icon">Transform</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="modules.html#children_key" class="tsd-kind-icon">CHILDREN_<wbr>KEY</a>
+						<a href="index.html#children_key" class="tsd-kind-icon">CHILDREN_<wbr>KEY</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="modules.html#id_key" class="tsd-kind-icon">ID_<wbr>KEY</a>
+						<a href="index.html#id_key" class="tsd-kind-icon">ID_<wbr>KEY</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="modules.html#parent_id_key" class="tsd-kind-icon">PARENT_<wbr>ID_<wbr>KEY</a>
+						<a href="index.html#parent_id_key" class="tsd-kind-icon">PARENT_<wbr>ID_<wbr>KEY</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="modules.html#root_id" class="tsd-kind-icon">ROOT_<wbr>ID</a>
+						<a href="index.html#root_id" class="tsd-kind-icon">ROOT_<wbr>ID</a>
 					</li>
 					<li class=" tsd-kind-variable">
-						<a href="modules.html#version" class="tsd-kind-icon">version</a>
+						<a href="index.html#version" class="tsd-kind-icon">version</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#each" class="tsd-kind-icon">each</a>
+						<a href="index.html#each" class="tsd-kind-icon">each</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#exclude" class="tsd-kind-icon">exclude</a>
+						<a href="index.html#exclude" class="tsd-kind-icon">exclude</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#exporter" class="tsd-kind-icon">exporter</a>
+						<a href="index.html#exporter" class="tsd-kind-icon">exporter</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#filter" class="tsd-kind-icon">filter</a>
+						<a href="index.html#filter" class="tsd-kind-icon">filter</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#map" class="tsd-kind-icon">map</a>
+						<a href="index.html#map" class="tsd-kind-icon">map</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#parse" class="tsd-kind-icon">parse</a>
+						<a href="index.html#parse" class="tsd-kind-icon">parse</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#torows" class="tsd-kind-icon">to<wbr>Rows</a>
+						<a href="index.html#torows" class="tsd-kind-icon">to<wbr>Rows</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
-						<a href="modules.html#totree" class="tsd-kind-icon">to<wbr>Tree</a>
+						<a href="index.html#totree" class="tsd-kind-icon">to<wbr>Tree</a>
 					</li>
 				</ul>
 			</nav>
