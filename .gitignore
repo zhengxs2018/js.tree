@@ -18,5 +18,5 @@ yarn-error.log*
 
 dist/
 temp/
-docs/public/api
+dist-doc/
 

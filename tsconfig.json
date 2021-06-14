@@ -27,11 +27,12 @@
     "forceConsistentCasingInFileNames": true
   },
   "typedocOptions": {
+    "readme": "none",
     "entryPoints": [
       "src/index.ts"
     ],
     "includeVersion": true,
-    "out": "docs/public/api",
+    "out": "dist-doc",
     "excludePrivate": true,
     "excludeExternals": true
   },
