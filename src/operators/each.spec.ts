@@ -1,7 +1,5 @@
 import { deepStrictEqual } from 'assert'
 
-import _ from 'lodash'
-
 import { each } from './each'
 
 describe('operators/each.js', function () {
@@ -58,9 +56,13 @@ describe('operators/each.js', function () {
 
     const result: string[] = []
 
-    each(data, (node, index) => {
-      result.push(`${index} ${node.title}`)
-    }, 'items')
+    each(
+      data,
+      (node, index) => {
+        result.push(`${index} ${node.title}`)
+      },
+      'items'
+    )
 
     deepStrictEqual(result, expected)
   })
@@ -88,9 +90,18 @@ describe('operators/each.js', function () {
 
     const result: string[] = []
 
-    each(data, (node, _, parents) => {
-      result.push(parents.concat(node).map(n => n.title).join('-'))
-    }, 'items')
+    each(
+      data,
+      (node, _, parents) => {
+        result.push(
+          parents
+            .concat(node)
+            .map((n) => n.title)
+            .join('-')
+        )
+      },
+      'items'
+    )
 
     deepStrictEqual(result, expected)
   })
@@ -118,9 +129,13 @@ describe('operators/each.js', function () {
 
     const result: string[] = []
 
-    each(data, (node) => {
-      result.push(node.title)
-    }, 'items')
+    each(
+      data,
+      (node) => {
+        result.push(node.title)
+      },
+      'items'
+    )
 
     deepStrictEqual(result, expected)
   })
@@ -137,21 +152,21 @@ describe('operators/each.js', function () {
       },
     ]
 
-    const expected: string[] = [
-      '站点设置',
-      '菜单维护',
-      '角色维护',
-    ]
+    const expected: string[] = ['站点设置', '菜单维护', '角色维护']
 
     const result: string[] = []
 
-    each(data, (node) => {
-      if (node.title === '财务') {
-        return true
-      }
+    each(
+      data,
+      (node) => {
+        if (node.title === '财务') {
+          return true
+        }
 
-      result.push(node.title)
-    }, 'items')
+        result.push(node.title)
+      },
+      'items'
+    )
 
     deepStrictEqual(result, expected)
   })

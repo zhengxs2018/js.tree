@@ -1,9 +1,6 @@
-import { defaultTo } from 'lodash'
-
 import type { ID, Row, Node, Exporter } from '../types'
 
 import { exporter } from '../common/utils'
-import { ROOT_ID } from '../common/constants'
 import { parse, ParseOptions } from '../common/parse'
 
 /**
@@ -29,5 +26,5 @@ export function toTree<S = Node, T extends Row = Row>(
   options: ToTreeOptions<S, T> = {}
 ): S[] {
   const { childNodes } = parse(data, options)
-  return exporter(childNodes, defaultTo(options.root, ROOT_ID))
+  return exporter(childNodes, options.root)
 }
