@@ -26,9 +26,14 @@ jobs:
         run: yarn --frozen-lockfile
       - name: 运行代码检查
         run: yarn lint
-      - name: 运行单元测试
-        run: yarn ci
       - name: 检查 API 导出情况
         run: |
           yarn build
           yarn api
+      - name: 运行单元测试
+        run: yarn ci
+      - name: 上传测试报告
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
