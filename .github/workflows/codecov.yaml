@@ -1,11 +1,11 @@
-name: UnitTest
+name: Codecov
 
 on:
   push:
-    branches-ignore:
+    branches:
       - main
     paths:
-      - .github/workflows/tests.yaml
+      - .github/workflows/codecov.yaml
       - src/**/*
       - api-extractor.json
       - package.json
@@ -29,4 +29,9 @@ jobs:
           yarn build
           yarn api
       - name: 运行单元测试
-        run: yarn test
+        run: yarn ci
+      - name: 上传测试报告
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
