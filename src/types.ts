@@ -1,3 +1,5 @@
+import type { ParseResult } from './common/parse'
+
 /**
  * ID类型
  *
@@ -35,7 +37,7 @@ export interface Node extends Row {
  *
  * @public
  */
-export type Exporter<T> = (nodes: Record<ID, T[]>) => T[]
+export type Exporter<T> = (nodes: Record<ID, T[]>, result: ParseResult<T>) => T[] | null | undefined
 
 /**
  * filter 回调

@@ -25,6 +25,5 @@ export function toTree<S = Node, T extends Row = Row>(
   data: T[],
   options: ToTreeOptions<S, T> = {}
 ): S[] {
-  const { childNodes } = parse(data, options)
-  return exporter(childNodes, options.root)
+  return exporter(parse(data, options), options.root)
 }

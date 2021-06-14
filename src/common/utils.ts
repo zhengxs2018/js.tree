@@ -1,6 +1,7 @@
 import { isNil, defaultTo } from 'lodash'
 
 import type { ID, Exporter } from '../types'
+import type { ParseResult } from './parse'
 
 import { ROOT_ID } from './constants'
 
@@ -77,9 +78,10 @@ export function popKey<T extends Record<string, unknown>, K extends keyof T, U>(
  * @param nodes - 包含所有层级的数据
  * @param root  - 根节点，支持自定义函数
  */
-export function exporter<T>(nodes: Record<ID, T[]>, root?: ID | Exporter<T>): T[] {
+export function exporter<T>(result: ParseResult<T>, root?: ID | Exporter<T>): T[] {
+  const nodes = result.childNodes
   if (typeof root === 'function') {
-    return root(nodes) || []
+    return root(nodes, result) || []
   }
 
   return nodes[defaultTo(root, ROOT_ID)] || []
