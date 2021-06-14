@@ -133,4 +133,48 @@ describe('transform/toTree.js', function () {
 
     deepStrictEqual(result, expected)
   })
+
+
+  it('test toTree(insert)', function () {
+    type Row = {
+      id: number
+      parentId: number | null
+      sort: number
+    }
+    const result = toTree<Row>(
+      [
+        { id: 3, parentId: 1, sort: 0 },
+        { id: 1, parentId: null, sort: 0 },
+        { id: 2, parentId: null, sort: 1 },
+      ],
+      {
+        insert(siblings, node) {
+          const index = siblings.findIndex((n: Row) => n.sort > node.sort)
+
+          if (index === -1) {
+            siblings.push(node)
+          } else {
+            siblings.splice(index, 0, node)
+          }
+        }
+      }
+    )
+
+    const expected = [
+      {
+        id: 1,
+        parentId: null,
+        sort: 0,
+        children: [{ id: 3, parentId: 1, sort: 0, children: [] }],
+      },
+      {
+        id: 2,
+        parentId: null,
+        sort: 1,
+        children: [],
+      }
+    ]
+
+    deepStrictEqual(result, expected)
+  })
 })
