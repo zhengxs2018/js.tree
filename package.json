@@ -1,6 +1,6 @@
 {
   "name": "@zhengxs/js.tree",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "快速，轻量，无依赖的树结构数据处理函数库",
   "main": "./dist/js.tree.common.js",
   "module": "./dist/js.tree.esm.js",
