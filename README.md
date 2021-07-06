@@ -192,7 +192,7 @@ const result = toTree(data, {
 ```
 
 
-[Try in runkit](https://npm.runkit.com/@zhengxs/bem)
+[Try in runkit](https://npm.runkit.com/@zhengxs/js.tree)
 
 ## TypeScript
 
