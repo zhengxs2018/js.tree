@@ -44,7 +44,7 @@ const data = [
     title: '财务',
     items: [
       { title: '收入流失', items: [] },
-      { title: '财务设置', children: [] },
+      { title: '财务设置', items: [] },
     ],
   },
   {
