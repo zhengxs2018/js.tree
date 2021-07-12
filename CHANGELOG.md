@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/zhengxs2018/js.tree/compare/v0.3.0...v0.4.0) (2021-07-12)
+
+
+### Features
+
+* 优先从转换后的数据中获取 id ([70ff07c](https://github.com/zhengxs2018/js.tree/commit/70ff07cfffbe739b7fda2cd7b6bdd9efc4efc69f))
+
+
+
 # [0.3.0](https://github.com/zhengxs2018/js.tree/compare/v0.2.0...v0.3.0) (2021-06-14)
 
 
