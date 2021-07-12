@@ -58,17 +58,17 @@ export function parse<S = Node, T extends Row = Row>(
   const childNodes: Record<ID, S[]> = {}
 
   data.forEach((row, i) => {
-    // 获取节点ID
-    const id = get(row, idKey) as ID
-
-    // id 必须存在
-    assert(isNotNil(id), `id is required, in ${i}.`)
-
     // 数据结构转换
     const node = transform(row, i)
 
     // 支持过滤掉某些数据
     if (isNil(node)) return
+
+    // 获取节点ID
+    const id = getId(node as unknown as Node, row, idKey) as ID
+
+    // id 必须存在
+    assert(isNotNil(id), `id is required, in ${i}.`)
 
     // 获取子级元素
     const children = childNodes[id]
@@ -81,7 +81,7 @@ export function parse<S = Node, T extends Row = Row>(
 
     // 获取上级节点ID
     //  注意: 不能使用 _.get 的 `defaultValue` 参数， 那个只有不存在 `key` 才会返回默认值
-    const parentId = defaultTo(get(row, parentKey), ROOT_ID) as ID
+    const parentId = defaultTo(getId(node as unknown as Node, row, parentKey), ROOT_ID) as ID
 
     // 获取同级元素
     const siblings = childNodes[parentId]
@@ -102,4 +102,13 @@ export function parse<S = Node, T extends Row = Row>(
     nodes,
     childNodes,
   }
+}
+
+/**
+ * 优先从 node 中获取 id
+ * 如果没有再从原始对象中获取
+ */
+function getId<T, K extends keyof T>(node: T, raw: Row, key: K): T[K] {
+  const id = get(node, key)
+  return isNil(id) ? get(raw, key) : id
 }
