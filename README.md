@@ -240,7 +240,7 @@ toTree<Nav>(source, {
 
 ## 其他
 
--[tiny-tree](https://github.com/zhengxs2018/tiny-tree)
+- [tiny-tree](https://github.com/zhengxs2018/tiny-tree)
 
 ## License
 
