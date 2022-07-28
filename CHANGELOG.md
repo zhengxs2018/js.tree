@@ -1,8 +1,9 @@
-# [0.4.0](https://github.com/zhengxs2018/js.tree/compare/v0.3.0...v0.4.0) (2021-07-12)
+# [0.5.0](https://github.com/zhengxs2018/js.tree/compare/v0.3.0...v0.5.0) (2022-07-28)
 
 
 ### Features
 
+* **operators:** 添加 repairWith 方法 ([a361756](https://github.com/zhengxs2018/js.tree/commit/a361756b8309e819951f7c6447728cb61b574ff8))
 * 优先从转换后的数据中获取 id ([70ff07c](https://github.com/zhengxs2018/js.tree/commit/70ff07cfffbe739b7fda2cd7b6bdd9efc4efc69f))
 
 
