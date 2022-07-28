@@ -19,7 +19,7 @@ export type None = null | undefined
  *
  * @public
  */
-export type Row = Record<string | number, unknown>
+export type Row = Record<string | number | symbol, unknown>
 
 /**
  * 默认的节点对象
@@ -37,7 +37,10 @@ export interface Node extends Row {
  *
  * @public
  */
-export type Exporter<T> = (nodes: Record<ID, T[]>, result: ParseResult<T>) => T[] | null | undefined
+export type Exporter<T> = (
+  nodes: Record<ID, T[]>,
+  result: ParseResult<T>
+) => T[] | null | undefined
 
 /**
  * filter 回调

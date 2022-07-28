@@ -82,6 +82,7 @@
   - [each 循环内容](./docs/operators/each.md)
   - [filter 过滤内容](./docs/operators/filter.md)
   - [exclude 排除内容](./docs/operators/exclude.md)
+  - [repairWith 修复关系](./docs/operators/repairWith.md)
 - [二次封装](./docs/advanced/custom.md)
 
 ### 安装
