@@ -30,6 +30,7 @@ export const resolveRepairWithOptions = <T extends Row = Row, U extends Node = N
 /**
  * 根据列表修复缺失的节点数据
  *
+ * @public
  * @param list - 不完整列表数据
  * @param  config - 配置参数
  * @returns 已修复好的数结构
