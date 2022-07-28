@@ -7,7 +7,6 @@
 - 回调函数返回 `true` 的数据将被过滤
 - 如果子级都被过滤掉了，那父级也会被排除
 
-
 回调函数参数：
 
 - **node** - 当前节点对象
@@ -57,7 +56,11 @@ const data = [
 ]
 
 // 如果不是 children 属性，可以通过第三个参数指定，可选
-const result = exclude(data, ({ title }) => title.includes('财务') || title.includes('角色'), 'items')
+const result = exclude(
+  data,
+  ({ title }) => title.includes('财务') || title.includes('角色'),
+  'items'
+)
 // ->
 // [
 //   {

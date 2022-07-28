@@ -46,14 +46,12 @@ describe('common/utils.js', function () {
     }
 
     const result = exporter<Row>(
-      parse<Row>(
-        [
-          { id: 1, parentId: 0 },
-          { id: 2, parentId: 0 },
-          { id: 3, parentId: 1 },
-        ]
-      ),
-      (nodes => nodes[1])
+      parse<Row>([
+        { id: 1, parentId: 0 },
+        { id: 2, parentId: 0 },
+        { id: 3, parentId: 1 },
+      ]),
+      (nodes) => nodes[1]
     )
 
     const expected = [{ id: 3, parentId: 1, children: [] }]
@@ -66,18 +64,22 @@ describe('common/utils.js', function () {
       id: number
       parentId: number
     }
-    const result = parse<Row>(
-      [
-        { id: 1, parentId: 0 },
-        { id: 2, parentId: 0 },
-        { id: 3, parentId: 1 },
-      ]
-    )
+    const result = parse<Row>([
+      { id: 1, parentId: 0 },
+      { id: 2, parentId: 0 },
+      { id: 3, parentId: 1 },
+    ])
 
     deepStrictEqual(exporter<Row>(result, 9), [])
 
-    deepStrictEqual(exporter<Row>(result, (() => null)), [])
+    deepStrictEqual(
+      exporter<Row>(result, () => null),
+      []
+    )
 
-    deepStrictEqual(exporter<Row>(result, (() => undefined)), [])
+    deepStrictEqual(
+      exporter<Row>(result, () => undefined),
+      []
+    )
   })
 })

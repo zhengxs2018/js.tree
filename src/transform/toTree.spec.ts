@@ -134,7 +134,6 @@ describe('transform/toTree.js', function () {
     deepStrictEqual(result, expected)
   })
 
-
   it('test toTree(insert)', function () {
     type Row = {
       id: number
@@ -156,7 +155,7 @@ describe('transform/toTree.js', function () {
           } else {
             siblings.splice(index, 0, node)
           }
-        }
+        },
       }
     )
 
@@ -172,7 +171,7 @@ describe('transform/toTree.js', function () {
         parentId: null,
         sort: 1,
         children: [],
-      }
+      },
     ]
 
     deepStrictEqual(result, expected)

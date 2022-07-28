@@ -49,12 +49,16 @@ const data = [
   },
 ]
 
-each(data, (node) => {
-  // 返回 true 将跳过子级的遍历操作
-  if (node.title === '财务') return true
+each(
+  data,
+  (node) => {
+    // 返回 true 将跳过子级的遍历操作
+    if (node.title === '财务') return true
 
-  console.log(node.title)
-}, 'items')
+    console.log(node.title)
+  },
+  'items'
+)
 // -> 站点设置
 // -> 菜单维护
 // -> 角色维护

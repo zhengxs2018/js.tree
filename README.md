@@ -70,9 +70,7 @@
 
 ## 快速开始
 
-
 [国内镜像](https://gitee.com/zhengxs2018/js.tree)
-
 
 ### 文档
 
@@ -190,7 +188,6 @@ const result = toTree(data, {
 //   }
 // ]
 ```
-
 
 [Try in runkit](https://npm.runkit.com/@zhengxs/js.tree)
 

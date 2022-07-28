@@ -196,7 +196,6 @@ console.log(tree.parent(11000))
 //    children: [...]
 //  }
 
-
 // 获取上级，直到最顶级
 console.log(tree.parents(11000))
 // ->
