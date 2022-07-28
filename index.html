@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@zhengxs/js.tree - v0.3.0</title>
-	<meta name="description" content="Documentation for @zhengxs/js.tree - v0.3.0">
+	<title>@zhengxs/js.tree - v0.5.0</title>
+	<meta name="description" content="Documentation for @zhengxs/js.tree - v0.5.0">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<script async src="assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@zhengxs/js.tree - v0.3.0</a>
+					<a href="index.html" class="title">@zhengxs/js.tree - v0.5.0</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -48,7 +48,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>@zhengxs/js.tree - v0.3.0</h1>
+			<h1>@zhengxs/js.tree - v0.5.0</h1>
 		</div>
 	</div>
 </header>
@@ -98,6 +98,7 @@
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#filter" class="tsd-kind-icon">filter</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#map" class="tsd-kind-icon">map</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#parse" class="tsd-kind-icon">parse</a></li>
+								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#repairwith" class="tsd-kind-icon">repair<wbr>With</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#torows" class="tsd-kind-icon">to<wbr>Rows</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#totree" class="tsd-kind-icon">to<wbr>Tree</a></li>
 							</ul>
@@ -113,7 +114,7 @@
 					<div class="tsd-signature tsd-kind-icon">Exporter&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>nodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span>, result<span class="tsd-signature-symbol">: </span><a href="index.html#parseresult" class="tsd-signature-type" data-tsd-kind="Type alias">ParseResult</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L40">types.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/types.ts#L40">types.ts:40</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -158,7 +159,7 @@
 					<div class="tsd-signature tsd-kind-icon">ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L8">types.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/types.ts#L8">types.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -173,7 +174,7 @@
 					<div class="tsd-signature tsd-kind-icon">None<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L15">types.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/types.ts#L15">types.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -188,7 +189,7 @@
 					<div class="tsd-signature tsd-kind-icon">Parse<wbr>Options&lt;T, S&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>childrenKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>idKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>insert<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">(</span>siblings<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span>, node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span>parentKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>transform<span class="tsd-signature-symbol">?: </span><a href="index.html#transform" class="tsd-signature-type" data-tsd-kind="Type alias">Transform</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/parse.ts#L9">common/parse.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/common/parse.ts#L9">common/parse.ts:9</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -273,7 +274,7 @@
 					<div class="tsd-signature tsd-kind-icon">Parse<wbr>Result&lt;S&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span>childNodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>childrenKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>idKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>nodes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><a href="index.html#id" class="tsd-signature-type" data-tsd-kind="Type alias">ID</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>parentKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/parse.ts#L23">common/parse.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/common/parse.ts#L23">common/parse.ts:23</a></li>
 						</ul>
 					</aside>
 					<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -334,7 +335,7 @@
 					<div class="tsd-signature tsd-kind-icon">Predicate&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L47">types.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/types.ts#L50">types.ts:50</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -373,10 +374,10 @@
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="row" class="tsd-anchor"></a>
 					<h3>Row</h3>
-					<div class="tsd-signature tsd-kind-icon">Row<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">Row<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L22">types.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/types.ts#L22">types.ts:22</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -391,7 +392,7 @@
 					<div class="tsd-signature tsd-kind-icon">Transform&lt;T, S&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">S</span><span class="tsd-signature-symbol"> | </span><a href="index.html#none" class="tsd-signature-type" data-tsd-kind="Type alias">None</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/types.ts#L54">types.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/types.ts#L57">types.ts:57</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -442,7 +443,7 @@
 					<div class="tsd-signature tsd-kind-icon">CHILDREN_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;children&quot;</span><span class="tsd-signature-symbol"> = &#x27;children&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/constants.ts#L27">common/constants.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/common/constants.ts#L27">common/constants.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -457,7 +458,7 @@
 					<div class="tsd-signature tsd-kind-icon">ID_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;id&quot;</span><span class="tsd-signature-symbol"> = &#x27;id&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/constants.ts#L13">common/constants.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/common/constants.ts#L13">common/constants.ts:13</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -472,7 +473,7 @@
 					<div class="tsd-signature tsd-kind-icon">PARENT_<wbr>ID_<wbr>KEY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;parentId&quot;</span><span class="tsd-signature-symbol"> = &#x27;parentId&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/constants.ts#L20">common/constants.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/common/constants.ts#L20">common/constants.ts:20</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -487,7 +488,7 @@
 					<div class="tsd-signature tsd-kind-icon">ROOT_<wbr>ID<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;__root__&quot;</span><span class="tsd-signature-symbol"> = &#x27;__root__&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/constants.ts#L6">common/constants.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/common/constants.ts#L6">common/constants.ts:6</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -502,7 +503,7 @@
 					<div class="tsd-signature tsd-kind-icon">version<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">&quot;__VERSION__&quot;</span><span class="tsd-signature-symbol"> = &#x27;__VERSION__&#x27;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/index.ts#L24">index.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/index.ts#L25">index.ts:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -524,7 +525,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/operators/each.ts#L16">operators/each.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/operators/each.ts#L16">operators/each.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -597,7 +598,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/operators/exclude.ts#L16">operators/exclude.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/operators/exclude.ts#L16">operators/exclude.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -670,7 +671,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/utils.ts#L81">common/utils.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/common/utils.ts#L81">common/utils.ts:81</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -710,7 +711,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/operators/filter.ts#L16">operators/filter.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/operators/filter.ts#L16">operators/filter.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -783,7 +784,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/operators/map.ts#L16">operators/map.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/operators/map.ts#L16">operators/map.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -859,7 +860,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/common/parse.ts#L46">common/parse.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/common/parse.ts#L46">common/parse.ts:46</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -897,6 +898,53 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="repairwith" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> repair<wbr>With</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">repair<wbr>With&lt;T, U&gt;<span class="tsd-signature-symbol">(</span>list<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, config<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RepairWithConfig</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/operators/repairWith.ts#L37">operators/repairWith.ts:37</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>根据列表修复缺失的节点数据</p>
+								</div>
+							</div>
+							<h4 class="tsd-type-parameters-title">Type parameters</h4>
+							<ul class="tsd-type-parameters">
+								<li>
+									<h4>T<span class="tsd-signature-symbol">: </span><a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a> = <a href="index.html#row" class="tsd-signature-type" data-tsd-kind="Type alias">Row</a></h4>
+								</li>
+								<li>
+									<h4>U<span class="tsd-signature-symbol">: </span><a href="interfaces/node.html" class="tsd-signature-type" data-tsd-kind="Interface">Node</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span> = <a href="interfaces/node.html" class="tsd-signature-type" data-tsd-kind="Interface">Node</a></h4>
+								</li>
+							</ul>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>list: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>不完整列表数据</p>
+									</div>
+								</li>
+								<li>
+									<h5>config: <span class="tsd-signature-type">RepairWithConfig</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>配置参数</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">U</span><span class="tsd-signature-symbol">[]</span></h4>
+							<p>已修复好的数结构</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
 					<a name="torows" class="tsd-anchor"></a>
 					<h3>to<wbr>Rows</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
@@ -906,7 +954,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/transform/toRows.ts#L14">transform/toRows.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/transform/toRows.ts#L14">transform/toRows.ts:14</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -952,7 +1000,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/62c16f5/src/transform/toTree.ts#L207">transform/toTree.ts:207</a></li>
+									<li>Defined in <a href="https://github.com/zhengxs2018/js.tree/blob/f12fd72/src/transform/toTree.ts#L207">transform/toTree.ts:207</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1240,6 +1288,9 @@
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="index.html#parse" class="tsd-kind-icon">parse</a>
+					</li>
+					<li class=" tsd-kind-function tsd-has-type-parameter">
+						<a href="index.html#repairwith" class="tsd-kind-icon">repair<wbr>With</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="index.html#torows" class="tsd-kind-icon">to<wbr>Rows</a>
