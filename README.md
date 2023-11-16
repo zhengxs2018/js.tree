@@ -29,12 +29,6 @@
     <a href="https://unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js">
       <img src="https://img.badgesize.io/https:/unpkg.com/@zhengxs/js.tree/dist/js.tree.min.js?compression=gzip&style=flat" alt="Gzip Size" />
     </a>
-    <a href="https://david-dm.org/zhengxs2018/js.tree">
-      <img src="https://img.shields.io/david/zhengxs2018/js.tree" alt="Dependency Status" />
-    </a>
-    <a href="https://david-dm.org/zhengxs2018/js.tree?type=dev">
-      <img src="https://img.shields.io/david/dev/zhengxs2018/js.tree" alt="DevDependency Status" />
-    </a>
     <a href="https://dashboard.cypress.io/projects/dtcor7/runs">
       <img src="https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/dtcor7/main&style=flat&logo=cypress" alt="Cypress" />
     </a>

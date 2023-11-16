@@ -7,6 +7,7 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
+// cSpell: ignore ctitle cparagraph
 async function makeItem(parentId, depth) {
   const menuItem = mock({
     id: Random.uuid(),

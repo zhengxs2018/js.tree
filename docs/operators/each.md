@@ -33,7 +33,7 @@ each(data, (node) => {
 // -> 角色维护
 ```
 
-默认子级列表的属性名称是 **chilren**，可以通过第三个参数修改
+默认子级列表的属性名称是 **children**，可以通过第三个参数修改
 
 ```js
 import { each } from '@zhengxs/js.tree'

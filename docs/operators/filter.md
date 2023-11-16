@@ -49,7 +49,7 @@ const result = filter(data, (node, index, parents) => {
 // ]
 ```
 
-默认子级列表的属性名称是 **chilren**，可以通过第三个参数修改
+默认子级列表的属性名称是 **children**，可以通过第三个参数修改
 
 ```js
 import { filter } from '@zhengxs/js.tree'

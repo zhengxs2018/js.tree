@@ -25,7 +25,8 @@
     "codecov",
     "mediinfo",
     "runkit",
-    "sourcemap"
+    "sourcemap",
+    "zhengxs"
   ],
   "cSpell.ignoreWords": [
     "filesize",
